@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="?android:attr/selectableItemBackground"
+    tools:context=".controller.dashboard.ChatActivity"
+    android:fitsSystemWindows="true"
+    tools:visibility="visible">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <!--ImageView
+            android:id="@+id/imgChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/bg_missed_call_icon" /-->
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_toolbar_border"
+        android:elevation="40dp"
+        android:outlineProvider="none"
+        android:visibility="visible"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left">
+
+            <ImageView
+                android:id="@+id/imgChatAvator"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_caller_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtChatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="TextView"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/txtLastSeen"
+                app:layout_constraintStart_toEndOf="@+id/imgChatAvator"
+                app:layout_constraintTop_toTopOf="@id/imgChatAvator" />
+            <TextView
+                android:id="@+id/txtLastSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="last Seen"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/imgChatAvator"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/imgChatAvator"
+                app:layout_constraintTop_toBottomOf="@id/txtChatName"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/relTxtLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:stackFromBottom="true"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/mic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+    <!--LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="93dp"
+        android:layout_height="62dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="403dp"
+        tools:layout_editor_absoluteY="725dp"-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_camra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic"
+        app:layout_constraintTop_toBottomOf="@+id/chatRecycler"
+        app:layout_constraintVertical_bias="0.477" />
+
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/imageView"
+        android:src="@drawable/ic_microphone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRecycler"
+        app:layout_constraintVertical_bias="0.477"/>
+
+    <ImageView
+        android:id="@+id/floatingActionButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="29dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:backgroundTint="@color/transparent_blue"
+        app:fabCustomSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRecycler"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relTxtLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="10dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/backround"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton">
+
+        <EditText
+            android:id="@+id/chatEtText"
+            android:completionThreshold="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emoji"
+            app:layout_constraintStart_toEndOf="@id/visualizer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/emoji"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_emoji"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/img_to_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatEtText"
+            android:scaleType="fitXY"/>
+
+        <include layout="@layout/pdf_chat_file"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatEtText"
+            android:id="@+id/pdfLayout"/>
+        <include layout="@layout/chat_file"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatEtText"
+            android:id="@+id/fileLayout"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatEtText"/>
+
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_delete_red"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Chronometer
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:id="@+id/recordTimer"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView33"
+            android:textSize="11sp"/>
+        <com.telebroad.teleconsole.helpers.VisualizerView
+            android:id="@+id/visualizer"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/recordTimer"
+            app:layout_constraintEnd_toStartOf="@id/chatEtText"
+            android:layout_height="20dp"/>
+        <include layout="@layout/voicnotes_chat_to_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/voiceNoteToSend"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relEtLayout"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/backround"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cancelEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/confirmEdit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_answer_icon"
+            android:backgroundTint="#13d66e"
+            android:foreground="@drawable/ic_check"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/cancelEdit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:foreground="@drawable/ic_baseline_clear_24"
+            android:background="@drawable/bg_missed_call_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@id/confirmEdit"
+            app:layout_constraintStart_toEndOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <!--androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="721dp" /-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

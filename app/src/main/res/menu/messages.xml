@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_filter"
+        android:orderInCategory="200"
+        android:title="@string/filterTitle"
+        android:icon="@drawable/ic_filter_list"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_all"
+                android:title="@string/all_messages"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/action_fax"
+                android:title="@string/fax"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/action_sms"
+                android:title="@string/sms_messages"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/action_voicemail"
+                android:title="@string/voicemail"
+                app:showAsAction="never"
+                />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

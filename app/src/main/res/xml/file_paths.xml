@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path
+        name="TeleConsoleEP1"
+        path="TeleConsole/"/>
+    <external-path
+        name="TeleConsoleEP2"
+        path="./"/>
+    <files-path
+        name="TeleConsoleFile1"
+        path="./"/>
+    <files-path
+        name="TeleConsoleFile2"
+        path="/"/>
+    <external-path name="my_downloads" path="Download/" />
+    <files-path
+        name="TeleConsoleFile3"
+        path="TeleConsole/Voicemails"/>
+    <external-files-path name="TeleConsoleEFP1" path="./" />
+    <external-files-path name="external_files" path="." />
+    <external-files-path name="TeleConsoleEFP2" path="Teleconsole/" />
+    <external-files-path name="TeleConsoleEFP3" path="/" />
+    <external-files-path name="TeleConsoleEFP4" path="Teleconsole/Voicemails" />
+
+</paths>

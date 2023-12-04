@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_messages"
+        android:icon="@drawable/ic_messages"
+        android:title="@string/messages"
+        android:iconTint="@color/black"
+        app:showAsAction="always|withText"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/navigation_callhistory"
+        android:icon="@drawable/ic_call_color_primary"
+        android:title="@string/calls"
+        android:iconTint="@color/black"
+        app:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/ic_contacts"
+        android:title="@string/contacts"
+        android:iconTint="@color/black"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_dialpad"
+        android:icon="@drawable/ic_chat"
+        android:title="Group"
+        android:iconTint="@color/black"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        android:iconTint="@color/black"
+        app:showAsAction="always|withText"/>
+
+</menu>

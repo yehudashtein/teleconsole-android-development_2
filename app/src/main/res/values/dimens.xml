@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="myTabDimen">40dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">150dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">20dp</dimen>
+    <dimen name="call_control_button_size">56dp</dimen>
+    <dimen name="call_control_button_padding">12dp</dimen>
+    <dimen name="call_control_button_title_size">14sp</dimen>
+    <dimen name="dialpad_padding">12dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="voip_dialog_side_margin">24dp</dimen>
+    <dimen name="voip_dialog_top_margin">8dp</dimen>
+    <dimen name="listPopupWindowItemHeight">40dp</dimen>
+    <dimen name="listPopupWindowMargin">8dp</dimen>
+    <dimen name="dialpadMaxWidth">100dp</dimen>
+    <dimen name="dialpadMaxHeight">67dp</dimen>
+    <dimen name="dtmfDialpadMaxWidth">350dp</dimen>
+    <dimen name="dtmfDialpadMaxHeight">350dp</dimen>
+
+</resources>

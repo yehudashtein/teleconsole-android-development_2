@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/myTabDimen"
+        android:paddingStart="13dp"
+        app:tabTextColor="@android:color/black"
+        app:tabMode="scrollable"
+        style="@style/MyCustomTabText"
+        android:elevation="4dp"
+        android:paddingBottom="4dp"
+        app:tabIndicatorHeight="0dp"
+        android:layout_alignParentTop="true" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout" />
+
+    <ProgressBar
+        android:id="@+id/SearchView"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</RelativeLayout>

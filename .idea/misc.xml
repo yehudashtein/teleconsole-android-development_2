@@ -1,0 +1,370 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="../../.gradle/caches/transforms-3/d6a8e1869516d2d4a96f91cc34053279/transformed/jetified-pix-1.5.4/res/drawable/red_circle.xml" value="0.1825" />
+        <entry key="app/src/debug/res/menu/navigation.xml" value="0.23854166666666668" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_add4.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_group.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_new_img_group.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_new_img_group2.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_new_img_group3.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_new_img_group4.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_search_black_24dp.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_send2.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable-mdpi/bg_missed_call_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable-v21/bg_sms_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable-v21/bg_voicemail_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_manage.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_send.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_share.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_icon_logo_for_app.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/backround.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/bg_answer_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_answer_notif.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_border_top.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_call_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_cancel_image.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_circle.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_decline_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_fax_icon.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_google_login_btn.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/bg_grey_circle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_image_preview.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_incoming_shmutshek.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_incoming_sms.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_incoming_text.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_ms_login_btn.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/bg_new_text_shmutshek.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_new_text_text.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_no_messages.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_outgoing_shmutshek.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_outgoing_sms.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_outgoing_text.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_rectangle_white_ripple.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_rounded_rectangle.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_sign_in_tb.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_signup_button.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/bg_text_incoming.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/cell_wifi.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/chat_photoview.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/chat_speed_shape.xml" value="0.155" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/circle_outline_black_ripple.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/circle_ripple_primary_color.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/cursor.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/dispay_image_backround.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/dnd_track.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/download.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/foreground_ripple_white.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/google_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/gray_toolbar_border.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add_a_photo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add_photo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add_photo_gray.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_attach_file.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_backspace.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/ic_baseline_block_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_nearby_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_btn_google_light_normal_ios.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_business.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_black.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_color_primary.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_history.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_made.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_merge.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_missed.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_quality.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_received.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_split.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_call_white.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_caller_id.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_camra.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_cancel.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_cancel_image.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_cell_number.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_check.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_conference.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_contacts.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_create.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_delete_black.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dialer_sip.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dialpad.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_direct_call.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_do_not_disturb.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_download_1.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_download_2.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_download_3.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_download_4.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_edit_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_emoji.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_error_outline_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_fax.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_file.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_filter_list.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_folder.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_forward.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_forward_black.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_hangup.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_icon_logo_for_app_backround.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_image_color_primary.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_incoming_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_lock_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_logo_w_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_message.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_messages.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_messages_white.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_mic.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_mic_off.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_microphone.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_ms_symbollockup_mssymbol_19.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_no_calls.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_no_messages.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_notification_small.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_notifications.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_outline_arrow_back_24.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/ic_outline_group_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_outline_lock_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_pause.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_person_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_person_black.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_person_white.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_phone_locked.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_phone_notification.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_phone_sms.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_phone_transfer.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_photo.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_play_circle.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_read_all.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_record.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_red_group.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_reset_code.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_ring_volume.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_ringing.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_ringing_0.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_ringing_1.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_ringing_2.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_ringing_3.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/ic_security_black.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/ic_send.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_sip_phone.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_sms.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_sms_black.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_speaker_off.xml" value="0.171" />
+        <entry key="app/src/main/res/drawable/ic_speaker_phone.xml" value="0.171" />
+        <entry key="app/src/main/res/drawable/ic_switch.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_sync.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_system_settings.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_telebroad_logo_only.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_upload_logs.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_voicemail.xml" value="0.16006944444444443" />
+        <entry key="app/src/main/res/drawable/ic_voicemail_speaker.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/ic_white_add2.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/launcher_background.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/login_border.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/massage_input_backround.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ms_logo.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/outgoing_vector_background.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/progress_bar.xml" value="0.2555" />
+        <entry key="app/src/main/res/drawable/rectangle_black_ripple.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ripple.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/round_icon.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/signin_background.xml" value="0.2685" />
+        <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/drawable/thumb.xml" value="0.188" />
+        <entry key="app/src/main/res/drawable/voice_note_border.xml" value="0.1835" />
+        <entry key="app/src/main/res/drawable/voicnote_chat_thumb.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/white_circle_edges.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable/white_rounded_edges.xml" value="0.133" />
+        <entry key="app/src/main/res/layout/activity_active_call.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_chat_photo_view.xml" value="0.13796296296296295" />
+        <entry key="app/src/main/res/layout/activity_choose_contact.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_email_reset.xml" value="0.17569444444444443" />
+        <entry key="app/src/main/res/layout/activity_fax_open.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_files.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_folders.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_incoming_call.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17118055555555556" />
+        <entry key="app/src/main/res/layout/activity_mms_image_view.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_contact.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_fax.xml" value="0.17256944444444444" />
+        <entry key="app/src/main/res/layout/activity_new_fax_closed.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_text.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_permissions.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.17569444444444443" />
+        <entry key="app/src/main/res/layout/activity_second_call.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_signin.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_sms_conversation.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_view_contact.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_voicemail_open.xml" value="0.21813471502590673" />
+        <entry key="app/src/main/res/layout/app_bar_dashboard.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/channel_item.xml" value="0.4537470725995316" />
+        <entry key="app/src/main/res/layout/chat_photoview.xml" value="0.13796296296296295" />
+        <entry key="app/src/main/res/layout/contact_action_bar.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/contact_bottom_dialog.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/contact_spinner_item.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/content_dashboard.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/content_view_contact.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/dialog_choose_audio_route.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/dialog_device_number.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/dialog_edit_text.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/display_image_backround.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/download_menu.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragement_new_message_dialog.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.1484375" />
+        <entry key="app/src/main/res/layout/fragment_callhistory_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_contact_list.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/fragment_contact_save_locations.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/fragment_dial_pad.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_dialpad_segment.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/fragment_messages_list.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/layout/fragment_second_call.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/fragment_select_image_source.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/image_item_chat.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/item_channel.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item_chat.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_chat_date.xml" value="0.17999144933732364" />
+        <entry key="app/src/main/res/layout/item_chat_event.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_choose_sms.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_contact.xml" value="0.3945578231292517" />
+        <entry key="app/src/main/res/layout/item_email_new.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/item_file.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/item_folder.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/item_incoming_sms.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_message.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_outgoing_mms.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_outgoing_sms.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_phone_action.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/layout/item_phone_new_contact.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/item_reaction.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/item_view_contact_email.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/item_view_contact_phone.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/layout_active_controls.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/layout_call_controls.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/layout_dialog_save_location.xml" value="0.15381944444444445" />
+        <entry key="app/src/main/res/layout/layout_dialpad.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/layout_dialpad_expanded.xml" value="0.1407103825136612" />
+        <entry key="app/src/main/res/layout/layout_send_text.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/menu_dnd.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/nav_header_dashboard.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/new_message_item.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/notification_incoming_call.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/notification_item.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/preference_header.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/speed_chat_shape.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/split_dialog.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/sync_menu.xml" value="0.16979166666666667" />
+        <entry key="app/src/main/res/layout/voicenote_speed_chat.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/voicnotes_chat.xml" value="0.165" />
+        <entry key="app/src/main/res/menu/activity_dashboard_drawer.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/call_history.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/menu/chat_toolbar.xml" value="0.2375" />
+        <entry key="app/src/main/res/menu/contact.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/dashboard.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/menu_fax_open.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/menu/menu_second_call.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/menu_sms_conversation.xml" value="0.165" />
+        <entry key="app/src/main/res/menu/menu_voicemail_open.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/menu/messages.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/menu/messages_selected.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/menu/mms_open.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/menu/navigation.xml" value="0.15069444444444444" />
+        <entry key="app/src/main/res/menu/settings.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/sms_selected.xml" value="0.1597222222222222" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.27697594501718215" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.165" />
+        <entry key="app/src/main/res/xml/settings.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/app/src/main/java" />
+    <option name="OPTION_SCOPE" value="private" />
+    <option name="OTHER_OPTIONS" value="-bootclasspath /Users/shlomierottenberg/Library/Android/sdk/platforms/android-31/android.jar -sourcepath /Users/shlomierottenberg/StudioProjects/teleconsole-v2/app/src/main/java" />
+    <option name="OPTION_INCLUDE_LIBS" value="true" />
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+    <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="15">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="android.annotation.Nullable" />
+          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="11" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
+          <item index="14" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="15">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="android.annotation.NonNull" />
+          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
+          <item index="14" class="java.lang.String" itemvalue="lombok.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

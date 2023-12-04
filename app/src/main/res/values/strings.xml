@@ -1,0 +1,449 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">TeleConsole</string>
+    <string name="process_name" translatable="false">TeleConsole_SIP</string>
+    <string name="login_error">Bad username or password</string>
+    <string name="malformed_error">Response is not in JSON format, this might be because of your filter</string>
+    <string name="no_phones_error">This user does not have any phone lines attached to it. Please contact TeleBroad support to setup your account.</string>
+    <string name="telebroad_logo">Telebroad Logo</string>
+    <string name="please_wait_one_moment">Please wait one moment</string>
+    <string name="checking_your_credentials">Verifying your user name and password</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="base_url" translatable="false">https://webserv.telebroad.com/api/teleconsole/rest</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="teleconsole">TeleConsole</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot your Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="unable_to_login">Unable to log in</string>
+    <string name="default_username" translatable="false" />
+    <string name="default_password" translatable="false" />
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="messages">Messages</string>
+    <string name="call_history">Call History</string>
+    <string name="contacts">Contacts</string>
+    <string name="dial_pad">Dial Pad</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="do_not_disturb">Do Not Disturb</string>
+    <string name="do_not_disturb_phone_banner">Phone is on Do Not Disturb</string>
+    <string name="do_not_disturb_teleconsole_banner">TeleConsole is on Do Not Disturb</string>
+    <string name="documents">Documents</string>
+
+    <string name="logout">Log Out</string>
+    <string name="dial_nine">dial nine</string>
+    <string name="mute">Mute</string>
+    <string name="dialpad">Dialpad</string>
+    <string name="speaker">Speaker</string>
+    <string name="switch_title">Switch</string>
+    <string name="forward">Transfer</string>
+    <string name="forward_fax">Forward Fax</string>
+    <string name="hold">Hold</string>
+    <string name="add_call">Add Call</string>
+    <string name="record">Record</string>
+    <string name="conference">Conference</string>
+    <string name="hide">Hide</string>
+    <string name="hangup">Hang up</string>
+    <string name="decline">Decline</string>
+    <string name="answer">Answer</string>
+    <string name="incoming_call">Incoming Call Ringing</string>
+    <string name="title_activity_second_call">SecondCallActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="emergency_dialog_title">Emergency Numbers</string>
+    <string name="emergency_dialog_message">According to our terms and conditions, you may not use our softphone to dial an emergency number. Would you like to call using your phone?</string>
+    <string name="emergency_dialog_call">Call</string>
+    <string name="emergency_dialog_cancel">Cancel</string>
+    <string name="section_format">Coming soon section: %1$d</string>
+    <string name="no_phones">No Phones</string>
+    <string name="disabled_user">Disabled User</string>
+    <string name="contact_button_title">CONTACT NOW</string>
+    <string name="cancel">Cancel</string>
+    <string name="domain">push.telebroad.com</string>
+    <string name="telebroad_support_number">12124449911</string>
+    <string name="com.pubnub.publishKey" translatable="false" tools:ignore="ExtraTranslation">pub-c-82403925-3c5f-466f-a67b-8faef7d9492d</string>
+    <string name="com.pubnub.subscribeKey" translatable="false" tools:ignore="ExtraTranslation">sub-c-57712b5e-05ae-11e4-aac6-02ee2ddab7fe</string>
+    <string name="com.pubnub.secretKey" translatable="false" tools:ignore="ExtraTranslation">sec-c-NjM3NDgyYjEtYjY2Zi00N2I5LThmMWEtN2I2MjFkZTY1ZTY2</string>
+    <string name="unknown">Unknown</string>
+    <string name="company">Company</string>
+    <string name="personal">Personal</string>
+    <string name="loading">Loading…</string>
+    <string name="all_contacts">All Contacts</string>
+    <string name="mobile">Mobile</string>
+    <string name="all">All</string>
+    <string name="search_contacts">Search Contacts</string>
+    <string name="corporate">Corporate</string>
+    <string name="profile_pic">profile picture</string>
+    <string name="ext">Ext.</string>
+    <string name="sip">SIP</string>
+    <string name="error_fetching_token">Error Fetching Token</string>
+    <string name="registered">Online</string>
+    <string name="not_registered">Offline</string>
+    <string name="user_name">User Name</string>
+    <string name="ext_xxxx_sip_xxxxxxxxx">Ext. xxxx SIP xxxxxxx</string>
+    <string name="registration_loading">Registration Loading</string>
+    <string name="logout_with_param">Logout %1$s</string>
+    <string name="filterTitle">Filter</string>
+    <string name="missed_calls">Missed Calls</string>
+    <string name="incoming_calls">Incoming Calls</string>
+    <string name="outgoing_calls">Outgoing Calls</string>
+    <string name="all_calls">All Calls</string>
+    <string name="search_calls">Search Calls</string>
+    <string name="in_conf">In Conference</string>
+    <string name="switch_dialog_title">Switch Call to Phone</string>
+    <string name="switch_dialog_message">The call will be redirected to your mobile phone, Your phone will ring, Pick up to continue the call. This may take up to 10 seconds</string>
+    <string name="switch_dialog_button">Switch Call</string>
+    <string name="invalid_phone_number">Not a valid phone number</string>
+    <string name="android_permissions">Android Permissions</string>
+    <string name="mic_permissions"><b>TeleConsole</b> will ask you for access to use your <b>microphone</b> so you will be able to talk into the phone</string>
+    <string name="phone_permission"><b>TeleConsole</b> will ask for access to your <b>Phone</b> so you will be able to place and receive calls</string>
+    <string name="file_permissions"><b>TeleConsole</b> will ask for access to your <b>File System</b> so you can download voicemails and faxes</string>
+    <string name="contacts_permission"><b>TeleConsole</b> will ask for access to your <b>Contacts</b> so you can use them from the app</string>
+    <string name="bluetooth_permission"><b>TeleConsole</b> will ask for access to <b>Nearby Devices</b> so that you should be able to connect to <b>Bluetooth</b></string>
+    <string name="start_asking">Start Asking</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="delete_chat_team">Are you sure you want to delete the team?<strong> All data will be lost</strong></string>
+    <string name="waiting">Waiting</string>
+    <string name="incoming">Incoming</string>
+    <string name="connecting">Connecting</string>
+    <string name="ringing">Ringing</string>
+    <string name="connected">Connected</string>
+    <string name="holding">Holding</string>
+    <string name="on_hold">On Hold</string>
+    <string name="resuming">Resuming</string>
+    <string name="finished">Finished</string>
+    <string name="updating">Updating</string>
+    <string name="maximum_calls_reached">Sorry, the app cannot have more than 2 calls at once.</string>
+    <string name="all_messages">All Messages</string>
+    <string name="fax">Fax</string>
+    <string name="sms_messages">SMS Messages</string>
+    <string name="voicemail">Voicemail</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="call">Call</string>
+    <string name="download">Download</string>
+    <string name="delete">Delete</string>
+
+    <string-array name="contacts_filter">
+        <item>All</item>
+        <item>Personal</item>
+        <item>Company</item>
+    </string-array>
+
+    <string-array name="fragment_titles">
+        <item>Messages</item>
+        <item>Calls</item>
+        <item>Contacts</item>
+        <item>Dial Pad</item>
+        <item>Settings</item>
+    </string-array>
+    <string-array name="empty_array" />
+    <string name="sms">SMS</string>
+    <string-array name="notifications_array">
+        <item>@string/voicemail</item>
+        <item>@string/sms</item>
+        <item>@string/fax</item>
+        <item>@string/missed_calls</item>
+    </string-array>
+    <string-array name="voip_entries">
+        <item>Always Use Voip</item>
+        <item>Use Voip only on WiFi</item>
+        <item>Always Use Cellular Voice</item>
+    </string-array>
+    <string-array name="voip_values">
+        <item>@string/voip_always</item>
+        <item>@string/voip_wifi</item>
+        <item>@string/voip_never</item>
+    </string-array>
+    <string name="notification_never">Never</string>
+    <string name="notification_always">Always</string>
+    <string name="notification_dnd_value">DND</string>
+    <string name="notification_dnd_display">Respect Do Not Disturb Settings</string>
+    <string name="ringtone_both">Ring &amp; Vibrate</string>
+    <string name="ringtone_ring">Only Ring</string>
+    <string name="ringtone_vibrate">Only Vibrate</string>
+    <string name="ringtone_silent">Keep Silent</string>
+    <string-array name="ringtone">
+        <item>@string/ringtone_both</item>
+        <item>@string/ringtone_ring</item>
+        <item>@string/ringtone_vibrate</item>
+        <item>@string/ringtone_silent</item>
+    </string-array>
+    <string-array name="call_quality_entries">
+        <item>High (Codec G.722)</item>
+        <item>Medium (Codec G.711)</item>
+        <item>Low (Codec G.729)</item>
+        <item>For Slow Internet (Codec iLBC)</item>
+    </string-array>
+    <string-array name="call_quality_values">
+        <item>@string/high</item>
+        <item>@string/medium</item>
+        <item>@string/low</item>
+        <item>ILBC</item>
+    </string-array>
+    <string-array name="save_locations">
+        <item>Telebroad Cloud</item>
+        <item>Phone</item>
+    </string-array>
+    <string-array name="phone_types">
+        <item>Mobile</item>
+        <item>Work</item>
+        <item>Fax</item>
+    </string-array>
+    <string name="voip_key">VoIP</string>
+    <string name="high">HIGH</string>
+    <string name="medium">MEDIUM</string>
+    <string name="low">LOW</string>
+    <string name="voip_always">Always</string>
+    <string name="voip_never">Never</string>
+    <string name="voip_wifi">WiFi</string>
+    <string name="title_activity_voicemail_open">Voicemail</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="new_voicemail">New Voicemail</string>
+    <string name="new_sms">New SMS message</string>
+    <string name="from">From</string>
+    <string name="delete_voicemail">Delete Voicemail</string>
+    <string name="delete_voicemail_confirmation">Are you sure you want to delete this voicemail?</string>
+    <string name="call_back">Call Back</string>
+    <string name="channels">Channels</string>
+    <string name="notifications">Notifications</string>
+    <string name="local_settings">Local Settings</string>
+    <string name="tap_to_return_to_call">Tap to return to call</string>
+    <string name="sync">Sync</string>
+    <string name="general">General</string>
+    <string name="default_sms_title">Default SMS Number</string>
+    <string name="default_sms_summary">Choose which SMS number a SMS message should be sent from by default</string>
+    <string name="caller_id_summary">Choose which caller ID to show when making phone calls</string>
+    <string name="caller_id_title">Caller ID</string>
+    <string name="caller_id"> Caller ID: %1$s </string>
+    <string name="answer_call">Answer Call</string>
+    <string name="phone_line">Phone Line</string>
+    <string name="phone_line_summary">Choose which extension you want to make and receive calls on</string>
+    <string name="disabled_error_msg">This user has been disabled. Please contact Telebroad Support to resolve this issue.</string>
+    <string name="forward_to">Forward To</string>
+    <string name="forward_summary_negative">Calls are not being forwarded</string>
+    <string name="forward_summary_positive">Forwarding calls to %1$s</string>
+    <string name="forward_title">Forward calls</string>
+    <string name="decline_call">Decline call</string>
+    <string name="test_name">John Doe</string>
+    <string name="voip_title">VoIP Settings</string>
+    <string name="voip_summary">Choose when to use data (VoIP) and when to use cellular voice</string>
+    <string name="voip_dialog_message">When VoIP is turned off, outgoing calls will be made by calling you cellphone first, and when you pick up, the outgoing call will be placed</string>
+    <string name="call_quality_title">Call Quality</string>
+    <string name="call_quality_summary">Higher Call Quality uses more data, and might cause calls to be choppy in low data areas.</string>
+    <string name="server_call_message">Calling you at %1$s. Pick up to continue the call</string>
+    <string name="system_settings_title">Android Settings</string>
+    <string name="system_settings_summary">Change System settings for this app</string>
+    <string name="cell_number_title">Device Phone Number</string>
+    <string name="cell_number_summary">Set your phone number</string>
+    <string name="cell_number_key">Cell Phone Number</string>
+    <string name="send_text">Send a Text Message</string>
+    <string name="send_fax">Send a Fax</string>
+    <string name="say_something">Type A Message</string>
+    <string name="with">With %1$s</string>
+    <string name="name_time">%1$s %2$s %3$s</string>
+    <string name="backspace">backspace</string>
+    <string name="receiver_hint">Type a name or a phone number</string>
+    <string name="contact">Contact</string>
+    <string name="new_text_act_label">New Text</string>
+    <string name="choose_outgoing_sms">From %1$s</string>
+    <string name="separator">-</string>
+    <string name="no_sms_lines_title">No SMS Lines</string>
+    <string name="no_sms_lines_message">Sorry, we can\'t find an active sms number for your account. Please contact support to enable SMS for a number on your account.</string>
+    <string name="sms_callerid_chooser_title">Select SMS Line</string>
+    <string name="notif_reply">Reply</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="city_skyline">City Skyline</string>
+    <string name="save">Save</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="password_req">Password - Password must be at least 8 characters long</string>
+    <string name="password_short_error">Password is too short</string>
+    <string name="password_match_error">Passwords don\'t match</string>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://app.telebroad.com/.well-known/assetlinks.json\" }]</string>
+    <string name="reset_code">Reset Code</string>
+    <string name="reset_title">Reset Password</string>
+    <string name="reset">Reset</string>
+    <string name="invalid_email_error">The email you have entered is not a valid email</string>
+    <string name="sent_email_message">Click the reset link in the email we sent you.</string>
+    <string name="sent_email_title">Email Sent</string>
+    <string name="sent_email_button">Go to Email</string>
+    <string name="attach_photo">Attach Photo</string>
+    <string name="attach_file">Attach File</string>
+    <string name="take_a_photo">Take a Photo</string>
+    <string name="remove_file">Remove File</string>
+    <string name="new_fax_title">Send Fax</string>
+    <string name="pubnub_secret">sec-c-NjM3NDgyYjEtYjY2Zi00N2I5LThmMWEtN2I2MjFkZTY1ZTY2</string>
+    <string name="send_fax_button">Send Fax</string>
+    <string name="attach_a_document">Attach PDF Document</string>
+    <string name="attach_image">Choose an Image</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="no_contact">No Contact</string>
+    <string name="file_selected">File Selected</string>
+    <string name="sample_file">Sample File</string>
+    <string name="chose_fax_num">Choose Outgoing fax Number</string>
+    <string name="error_reset_password">Error Resetting Password</string>
+    <string name="error_sending_fax">Error Sending fax</string>
+    <string name="no_document">NoDocument to fax</string>
+    <string name="missed_call">Missed call</string>
+    <string name="missed_calls_notif">Missed calls</string>
+    <string name="error_sending_email">Error Sending Email</string>
+    <string name="loginError">Login Error</string>
+    <string name="new_fac">New Fax</string>
+    <string name="account_blocked_title">Account Locked</string>
+    <string name="account_blocked_message">Your Account has been locked. Please contact Support or Reset your password to unlock your account</string>
+    <string name="ring_volume_key">ring.volume</string>
+    <string name="ring_volume_title">Ringtone Type</string>
+    <string name="ring_volume_summary">Set ringtone to vibrate, ringing, both, or silent</string>
+    <string name="no_internet">No Internet</string>
+    <string name="check_internet">Please check if you are connected to mobile data or wifi</string>
+    <string name="tb_reg">reg.telebroad.com</string>
+    <string name="delete_convo_title">Delete Conversation</string>
+    <string name="delete_convo_message">Are you sure you want to delete this conversation?</string>
+    <string name="callButtonTitle">call</string>
+    <string name="search_message">Search Messages</string>
+    <string name="stay_with">Stay with  %1$s</string>
+    <string name="hold_both">Put Both Calls on Hold</string>
+    <string name="pick_call_stay">Pick a Call to stay with, the other call will be put on hold</string>
+    <string name="conference_not_implemented">Conference not yet implemented. Work In Progress</string>
+    <string name="files">Files</string>
+    <string name="folder">Folders</string>
+    <string name="mark_all_as_read">Mark all as Read</string>
+    <string name="sipRegistrationFailureTitle">Connection Failed</string>
+    <string name="sipRegistrationFailureMessage">Unable to connect to our phone servers. Please ensure that you have a stable internet connection. If you have a filter, and this issue comes up all the time, please ask them to bypass push.telebroad.com and push2.telebroad.com for VoIP calls</string>
+    <string name="server_call_title">Call Started</string>
+    <string name="link">&lt;a href=&quot;%1$s&quot;&gt;Open %2$s file&lt;/a&gt;</string>
+    <string name="attachment">%1$s Attachment</string>
+    <string name="copy">Copy</string>
+    <string name="image_downloaded">Image Downloaded</string>
+    <string name="share">Share</string>
+    <string name="short_number_error_title">Invalid Phone Number</string>
+    <string name="short_number_error_message">Sorry, This does not look like a real phone number</string>
+    <string name="use_tls_warning">Some carriers block VoIP calls. TLS prevents them from seeing that the TeleConsole calls are VoIP calls. We therefore recommend keeping TLS on</string>
+    <string name="direct_calls_only">Ignore Group Calls</string>
+    <string name="nonexsitent_call_error">This call does not exist</string>
+    <string name="unsupported_op_error">Unsupported operation</string>
+    <string name="call_not_exist">This Call Does not exist</string>
+    <string name="ongoing_call">Ongoing Call</string>
+    <string name="call_on_hold">Call on hold</string>
+    <string name="turn_speaker_on">Speaker</string>
+    <string name="turn_speaker_off">Speaker Off</string>
+    <string name="unhold">Unhold</string>
+    <string name="call_connecting">Dialing</string>
+    <string name="no_fax_lines_message">Sorry, we can\'t find an active fax number for your account. Please contact support to enable fax for a number on your account.</string>
+    <string name="no_fax_line_title">No Fax Lines</string>
+    <string name="notification_in_call_title">Active Call Notification</string>
+    <string name="notification_in_call_description">This is the notification shown when the app has an active call. Due to Android OS constraints, if you disable these notifications, your CALLS WILL STOP when the app goes in the background</string>
+    <string name="notification_sip_title">SIP Notification</string>
+    <string name="notification_sip_description">This is the notification shown when the app connects to the server when the app is in the background. Due to Android OS constraints, this notification is required to allow the app to check for incoming calls, even when the app is in the background. If you disable these notifications, incoming calls might NOT COME IN</string>
+    <string name="fax_sent_toast">Fax sent, check your email for status</string>
+    <string name="mark_all_read_toast">Everything marked as read</string>
+    <string name="mark_all_read_error_toast">Error marking everything as read</string>
+    <string name="call_established">TeleConsole Call Started</string>
+    <string name="no_mic_perm_title">No Microphone Permissions</string>
+    <string name="no_mic_perm_message">We don\'t have permission to use your microphone. We cannot make phone calls without using your microphone.</string>
+    <string name="call_quality_set_message">New Call Quality set</string>
+    <string name="tls_button_title">Turn Off TLS</string>
+    <string name="calling">Starting Call…</string>
+    <string name="new_contact">New Contact</string>
+    <string name="add_contact">Add to Contacts</string>
+    <string name="done">done</string>
+    <string name="contact_public_switch">Share contact with everyone in the company</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="save_number_dialog_title">Save as device number?</string>
+    <string name="change_company_contacts_toast">Company contacts can only be changed in the admin portal</string>
+    <string name="view_contact">View Contact</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="delete_contact_title">Delete Contact?</string>
+    <string name="delete_contact_message">Are you sure you want to delete this contact?</string>
+    <string name="passwords_dont_match_title">Passwords don\'t match</string>
+    <string name="no_account_label">Don\'t Have an Account?</string>
+    <string name="signup_button_title">Sign Up</string>
+    <string name="compose">Compose New</string>
+    <string name="text_message">Text Message</string>
+    <string name="add_contact_to">Add contact to</string>
+    <string name="android_device">Android Device</string>
+    <string name="telebroad_cloud">Telebroad Cloud</string>
+    <string name="add_to_existing">Add To Existing</string>
+    <string name="just_now">Just Now</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="mobile_header">MOBILE</string>
+    <string name="share_dialog_title">Share via…</string>
+    <string name="other">Other</string>
+    <string name="merge_calls">Merge Calls</string>
+    <string name="split_calls">Split Calls</string>
+    <string name="calling_string">Calling</string>
+    <string name="route_to_header">Change to…</string>
+    <string name="route_to_bluetooth">Bluetooth</string>
+    <string name="route_to_speaker">Speaker</string>
+    <string name="route_to_earpiece">Earpiece</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="headset">Headset</string>
+    <string name="upload_logs">Upload Logs</string>
+    <string name="logs_uploaded">Logs Uploaded</string>
+    <string name="error_downloading_fax">error downloading fax</string>
+    <string name="conversation_blocked">Conversation Blocked</string>
+    <string name="block_number">Block Number</string>
+    <string name="unblock_number">Unblock Number</string>
+    <string name="mark_conversation_as_unread">Mark as unread</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="microsoft_login">Sign In With Microsoft</string>
+    <string name="sign_in_with_telebroad">Sign In With Telebroad</string>
+    <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="with_method">With</string>
+    <string name="or_sign_in_using_your_username_and_password">Or sign in using your Username and Password</string>
+    <string name="sign_in_with_partners">Sign in with Google Or Microsoft</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="reset_password_subtitle">"Enter your email and we'll send you a link to reset your password."</string>
+    <string name="account_email">Account Email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="to">"To: "</string>
+    <string name="voicemail_transcription">Voicemail Transcription</string>
+    <string name="from_with_colon">From:</string>\
+    <string name="from_with_placeholder">From: %s</string>
+    <string name="to_with_placeholder">To: %s</string>
+    <string name="dial_a_number">Dial a number</string>
+    <string name="add_a_contact">Add A Contact</string>
+    <string name="compose_a_new_message">Compose a new message</string>
+    <string name="calls">Calls</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="teams">Teams</string>
+    <string name="expand_selection">expand selection</string>
+    <string name="direct_messages_header">Messages</string>
+    <string name="hide_selection">Hide Selection</string>
+    <string name="chat_event"><![CDATA[<em>%1$s %2$s %3$s</em>]]></string>
+    <string name="chat_event_no_actor"><![CDATA[<em>%1$s %2$s</em>]]></string>
+    <string name="chat_added">was added to %s by</string>
+    <string name="chat_joined">joined %s</string>
+    <string name="chat_left">left %s</string>
+    <string name="chat_removed">has been removed from %s by</string>
+    <string name="chat_group">the group</string>
+    <string name="search1">Search</string>
+    <string name="_1_x">1 x</string>
+    <string name="no_result_s_found">No Result\'s Found</string>
+</resources>

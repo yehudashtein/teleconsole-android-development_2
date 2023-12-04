@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/ManageTeams"
+        android:title="Manage team"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/deleteGroup"
+        android:title="Delete"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mute"
+        android:title="Mute Notification's"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/Unmute"
+        android:title="UnMute Notification's"
+        app:showAsAction="never"/>
+
+</menu>

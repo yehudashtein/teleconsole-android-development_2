@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#202124"
+    android:background="@android:color/transparent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <View
+        android:id="@+id/conferenceView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/conferenceTitle"
+        app:layout_constraintEnd_toEndOf="@+id/conferenceTitle"
+        app:layout_constraintStart_toStartOf="@+id/conferenceTitle"
+        app:layout_constraintTop_toTopOf="@+id/conferenceButton" />
+
+    <View
+        android:id="@+id/recordView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="@+id/recordButton"
+        app:layout_constraintTop_toTopOf="@+id/recordButton" />
+
+    <View
+        android:id="@+id/addCallView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/addCallButton"
+        app:layout_constraintStart_toStartOf="@+id/addCallButton"
+        app:layout_constraintTop_toTopOf="@+id/addCallButton" />
+
+    <View
+        android:id="@+id/speakerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/speakerText"
+        app:layout_constraintEnd_toEndOf="@+id/speakerButton"
+        app:layout_constraintStart_toStartOf="@+id/speakerButton"
+        app:layout_constraintTop_toTopOf="@+id/speakerButton" />
+
+    <View
+        android:id="@+id/transferView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/transferButton"
+        app:layout_constraintStart_toStartOf="@+id/transferButton"
+        app:layout_constraintTop_toTopOf="@+id/transferButton" />
+
+    <ImageView
+        android:id="@+id/muteButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:background="@drawable/circle_outline_black_ripple"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@color/call_control_tint"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_mic_off" />
+
+    <ImageView
+        android:id="@+id/transferButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/holdButton"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/holdButton"
+        app:srcCompat="@drawable/ic_phone_transfer" />
+
+    <ImageView
+        android:id="@+id/speakerButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:background="@drawable/circle_outline_black_ripple"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@color/call_control_tint"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpadButton"
+        app:layout_constraintEnd_toEndOf="@+id/speakerText"
+        app:layout_constraintStart_toStartOf="@+id/speakerText"
+        app:layout_constraintTop_toTopOf="@+id/dialpadButton"
+        app:srcCompat="@drawable/ic_voicemail_speaker" />
+
+    <ImageView
+        android:id="@+id/dialpadButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/muteButton"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/muteButton"
+        app:srcCompat="@drawable/ic_dialpad" />
+
+    <ImageView
+        android:id="@+id/holdButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:background="@drawable/circle_outline_black_ripple"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@color/call_control_tint"
+        app:layout_constraintBottom_toBottomOf="@+id/switchButton"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/switchButton"
+        app:srcCompat="@drawable/ic_pause" />
+
+    <ImageView
+        android:id="@+id/switchButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:padding="@dimen/call_control_button_padding"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_switch" />
+
+    <ImageView
+        android:id="@+id/addCallButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:padding="@dimen/call_control_button_padding"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/recordButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline6"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_add" />
+
+    <ImageView
+        android:id="@+id/recordButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:background="@drawable/circle_outline_black_ripple"
+        android:padding="@dimen/call_control_button_padding"
+        app:tint="@color/call_control_tint"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/conferenceButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addCallButton"
+        app:layout_constraintTop_toBottomOf="@+id/guideline6"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_record" />
+
+    <ImageView
+        android:id="@+id/conferenceButton"
+        android:layout_width="@dimen/call_control_button_size"
+        android:layout_height="@dimen/call_control_button_size"
+        android:padding="@dimen/call_control_button_padding"
+        app:layout_constraintBottom_toTopOf="@+id/conferenceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recordButton"
+        app:layout_constraintTop_toBottomOf="@+id/guideline6"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_conference" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/mute"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/switchButton"
+        app:layout_constraintStart_toStartOf="@+id/switchButton"
+        app:layout_constraintTop_toBottomOf="@+id/muteButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialpad"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/holdButton"
+        app:layout_constraintStart_toStartOf="@+id/holdButton"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/speakerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speaker"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/transferButton"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/transferButton"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/switch_title"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="@+id/addCallButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/addCallButton"
+        app:layout_constraintTop_toBottomOf="@+id/switchButton" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forward"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/conferenceButton"
+        app:layout_constraintStart_toStartOf="@+id/conferenceButton"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hold"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="@+id/recordButton"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_call"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCallButton"
+        app:layout_constraintStart_toStartOf="@id/addCallButton"
+        app:layout_constraintEnd_toEndOf="@id/addCallButton"
+        />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/record"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordButton"
+        app:layout_constraintStart_toStartOf="@id/recordButton"
+        app:layout_constraintEnd_toEndOf="@id/recordButton"
+        tools:layout_editor_absoluteX="131dp" />
+
+    <TextView
+        android:id="@+id/conferenceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/conference"
+        android:textSize="@dimen/call_control_button_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conferenceButton"
+        app:layout_constraintStart_toStartOf="@id/conferenceButton"
+        app:layout_constraintEnd_toEndOf="@id/conferenceButton"
+        tools:layout_editor_absoluteX="213dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="conferenceButton,conferenceTitle"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <View
+        android:id="@+id/muteView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/muteButton"
+        app:layout_constraintStart_toStartOf="@+id/muteButton"
+        app:layout_constraintTop_toTopOf="@+id/muteButton" />
+
+    <View
+        android:id="@+id/dialpadView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/dialpadButton"
+        app:layout_constraintStart_toStartOf="@+id/dialpadButton"
+        app:layout_constraintTop_toTopOf="@+id/dialpadButton" />
+
+    <View
+        android:id="@+id/switchView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/switchButton"
+        app:layout_constraintStart_toStartOf="@+id/switchButton"
+        app:layout_constraintTop_toTopOf="@+id/switchButton" />
+
+    <View
+        android:id="@+id/holdView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/holdButton"
+        app:layout_constraintStart_toStartOf="@+id/holdButton"
+        app:layout_constraintTop_toTopOf="@+id/holdButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

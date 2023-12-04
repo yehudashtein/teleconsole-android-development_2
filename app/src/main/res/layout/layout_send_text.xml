@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_sms_conversation">
+
+
+    <View
+        android:id="@+id/newTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_new_text_text"
+        android:backgroundTint="@color/sms_incoming_background"
+        app:layout_constraintBottom_toBottomOf="@id/newText"
+        app:layout_constraintEnd_toStartOf="@id/sendButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraintLayout3">
+
+    </View>
+
+    <Space
+        android:id="@+id/preview_space"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout3"
+        app:layout_constraintBottom_toTopOf="@id/image_preview"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/image_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/newText"
+        app:layout_constraintEnd_toEndOf="@id/newTextView"
+        app:layout_constraintHeight_max="100dp"
+        app:layout_constraintStart_toStartOf="@id/newTextView"
+        app:layout_constraintWidth_max="100dp"
+        tools:src="@drawable/profile_banner"
+        android:background="@drawable/profile_banner" />
+
+    <Space
+        android:id="@+id/cancel_space"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="@id/image_preview"
+        app:layout_constraintTop_toTopOf="@id/image_preview" />
+
+    <ImageView
+        android:id="@+id/image_cancel"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:paddingStart="2dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="2dp"
+        android:src="@drawable/ic_cancel_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cancel_space"
+        app:layout_constraintStart_toStartOf="@id/cancel_space"
+        tools:visibility="gone" />
+    <com.telebroad.teleconsole.helpers.VisualizerViewSMS
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:paddingTop="2dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="2dp"
+        android:id="@+id/VisualizerViewSMS"
+        app:layout_constraintBottom_toBottomOf="@id/newTextView"
+        app:layout_constraintEnd_toStartOf="@id/add_image"
+        app:layout_constraintHeight_min="48dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/recordTimer"
+        app:layout_constraintHorizontal_bias="0.5" />
+    <ImageView
+        android:id="@+id/delete"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_baseline_delete_blue"
+        app:layout_constraintStart_toStartOf="@id/newTextView"
+        app:layout_constraintTop_toTopOf="@id/newTextView"
+        app:layout_constraintBottom_toBottomOf="@id/newTextView"/>
+    <Chronometer
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="hi"
+        android:visibility="gone"
+        android:id="@+id/recordTimer"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@id/delete"
+        app:layout_constraintTop_toTopOf="@id/newTextView"
+        app:layout_constraintBottom_toBottomOf="@id/newTextView"/>
+
+    <EditText
+        android:id="@+id/newText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/clear"
+        android:elevation="8dp"
+        android:ems="10"
+        android:hint="@string/say_something"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="7"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_image"
+        app:layout_constraintHeight_min="48dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/newTextView" />
+
+    <ImageView
+        android:id="@+id/add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:minWidth="20dp"
+        android:minHeight="20dp"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/sendButton"
+        app:layout_constraintEnd_toStartOf="@id/VoiceNote"
+        app:layout_constraintTop_toTopOf="@id/sendButton"
+        app:srcCompat="@drawable/ic_add_photo_gray" />
+    <ImageView
+        android:id="@+id/VoiceNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:minWidth="20dp"
+        android:minHeight="20dp"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/sendButton"
+        app:layout_constraintEnd_toEndOf="@id/newTextView"
+        app:layout_constraintTop_toTopOf="@id/sendButton"
+        app:srcCompat="@drawable/ic_mic_blue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sendButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:elevation="1dp"
+        android:focusable="true"
+        app:backgroundTint="@color/sms_ic_bg"
+        app:fabCustomSize="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/newText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:srcCompat="@drawable/ic_send"
+        app:tint="@android:color/white" />
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--        android:id="@+id/send_text_group"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:elevation="1dp"-->
+
+<!--        app:constraint_referenced_ids="newTextView,cancel_space,newText,add_image,sendButton,VoiceNote" />-->
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--        android:id="@+id/imageGroup"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:constraint_referenced_ids="image_cancel,image_preview,preview_space"/>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:elevation="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:padding="4dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/image_preview"
+        app:layout_constraintStart_toStartOf="@id/newTextView"
+        app:layout_constraintEnd_toEndOf="@id/newTextView">
+
+        <ImageView
+            android:id="@+id/cancel_img"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_cancel_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+        <ImageView
+            android:id="@+id/playChat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_outline_play_arrow_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="100dp"
+            android:indeterminate="false"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:progressTint="#5C6BC0"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/timeRec"
+            app:layout_constraintStart_toEndOf="@+id/playChat"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Chronometer
+            android:id="@+id/timeRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cancel_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.609" />
+
+
+        <!--TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="00:00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include"
+            app:layout_constraintTop_toTopOf="parent" /-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:elevation="8dp"
+        app:layout_constraintStart_toEndOf="@+id/add_image"
+        app:layout_constraintTop_toTopOf="@+id/newTextView"
+        app:srcCompat="@drawable/bg_new_text_shmutshek" /-->
+
+</merge>

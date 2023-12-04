@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="4dp">
+
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/add_contact_to"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/androidLocationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.7"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/androidLocationView"
+        app:layout_constraintStart_toStartOf="@id/textView27"
+        app:layout_constraintTop_toTopOf="@id/androidLocationView"
+        app:srcCompat="@drawable/ic_phone"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:clickable="false"
+        android:text="@string/android_device"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@id/androidLocationView"
+        app:layout_constraintStart_toEndOf="@id/imageView27"
+        app:layout_constraintTop_toTopOf="@id/androidLocationView" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.7"
+        android:padding="8dp"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/telebroadLocationView"
+        app:layout_constraintStart_toStartOf="@id/textView27"
+        app:layout_constraintTop_toTopOf="@id/telebroadLocationView"
+        app:srcCompat="@drawable/telebroad_logo" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.7"
+        android:padding="8dp"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/addToExisting"
+        app:layout_constraintStart_toStartOf="@id/textView27"
+        app:layout_constraintTop_toTopOf="@id/addToExisting"
+        app:srcCompat="@drawable/ic_person_black" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/telebroad_cloud"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/telebroadLocationView"
+        app:layout_constraintStart_toEndOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/androidLocationView" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/add_to_existing"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintStart_toEndOf="@+id/imageView29"
+        app:layout_constraintTop_toTopOf="@+id/imageView29" />
+
+    <View
+        android:id="@+id/androidLocationView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <View
+        android:id="@+id/telebroadLocationView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/addToExisting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/androidLocationView" />
+
+
+    <!--View
+        android:id="@+id/existingView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telebroadLocationView" /-->
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/addToExisting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+
+        app:constraint_referenced_ids="textView30,imageView29"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telebroadLocationView"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

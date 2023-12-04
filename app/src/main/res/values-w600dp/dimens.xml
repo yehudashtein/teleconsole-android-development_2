@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialpad_padding">32dp</dimen>
+    <dimen name="dialpadMaxWidth">150dp</dimen>
+    <dimen name="dialpadMaxHeight">120dp</dimen>
+    <dimen name="dtmfDialpadMaxWidth">550dp</dimen>
+    <dimen name="dtmfDialpadMaxHeight">550dp</dimen>
+    <dimen name="myTabDimen">60dp</dimen>
+</resources>

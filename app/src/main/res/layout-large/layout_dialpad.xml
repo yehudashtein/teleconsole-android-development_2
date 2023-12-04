@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_width="350dp"
+    tools:layout_height="350dp">
+    <!--    tools:showIn="@layout/activity_active_call">-->
+
+    <ImageButton
+        android:id="@+id/dialpad_9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:contentDescription="@string/dial_nine"
+        android:scaleType="fitCenter"
+        android:tag="9"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_pound"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_pound"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_pound"
+        app:layout_constraintTop_toBottomOf="@+id/dialpad_6"
+        app:srcCompat="@drawable/dial_pad_9" />
+
+    <ImageButton
+        android:id="@+id/dialpad_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:contentDescription="dial 0"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:tag="0"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_star"
+        app:layout_constraintEnd_toStartOf="@+id/dialpad_pound"
+        app:layout_constraintHeight_max="@dimen/dialpadMaxHeight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialpad_star"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_star"
+        app:layout_constraintWidth_max="@dimen/dialpadMaxWidth"
+        app:srcCompat="@drawable/dial_pad_0" />
+
+    <ImageButton
+        android:id="@+id/dialpad_star"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:tag="*"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialpad_0"
+        app:layout_constraintHeight_max="@dimen/dialpadMaxHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialpad_7"
+        app:layout_constraintWidth_max="@dimen/dialpadMaxWidth"
+        app:srcCompat="@drawable/dial_pad_star" />
+
+    <ImageButton
+        android:id="@+id/dialpad_pound"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="#"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/dialpadMaxHeight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialpad_0"
+        app:layout_constraintTop_toBottomOf="@+id/dialpad_9"
+        app:layout_constraintWidth_max="@dimen/dialpadMaxWidth"
+        app:srcCompat="@drawable/dial_pad_pound" />
+
+    <ImageButton
+        android:id="@+id/dialpad_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="6"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_9"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_9"
+        app:layout_constraintTop_toBottomOf="@+id/dialpad_3"
+        app:srcCompat="@drawable/dial_pad_6" />
+
+    <ImageButton
+        android:id="@+id/dialpad_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="5"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_6"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_8"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_8"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_6"
+        app:srcCompat="@drawable/dial_pad_5" />
+
+    <ImageButton
+        android:id="@+id/dialpad_7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="7"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_8"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_star"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_star"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_8"
+        app:srcCompat="@drawable/dial_pad_7" />
+
+    <ImageButton
+        android:id="@+id/dialpad_8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="8"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_9"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_0"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_0"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_9"
+        app:srcCompat="@drawable/dial_pad_8" />
+
+    <ImageButton
+        android:id="@+id/dialpad_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="3"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/dialpad_6"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_6"
+        app:layout_constraintHeight_max="@dimen/dialpadMaxHeight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dialpad_2"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="@dimen/dialpadMaxWidth"
+        app:srcCompat="@drawable/dial_pad_3" />
+
+    <ImageButton
+        android:id="@+id/dialpad_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="4"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_5"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_7"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_7"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_5"
+        app:srcCompat="@drawable/dial_pad_4" />
+
+    <ImageButton
+        android:id="@+id/dialpad_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:tag="2"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_3"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_5"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_5"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_3"
+        app:srcCompat="@drawable/dial_pad_2" />
+
+    <ImageButton
+        android:id="@+id/dialpad_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_black_ripple"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:tag="1"
+        android:foregroundTint="@color/black"
+        app:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/dialpad_2"
+        app:layout_constraintEnd_toEndOf="@+id/dialpad_4"
+        app:layout_constraintStart_toStartOf="@+id/dialpad_4"
+        app:layout_constraintTop_toTopOf="@+id/dialpad_2"
+        app:srcCompat="@drawable/dial_pad_1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+</androidx.constraintlayout.widget.ConstraintLayout>

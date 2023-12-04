@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:visibility="gone"
+        android:id="@+id/vNewLine"
+        android:layout_width="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/call_missed_color"
+        app:layout_constraintEnd_toStartOf="@id/txtNew"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/txtNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/call_missed_color"
+        android:text="NEW"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtClock"
+        android:visibility="gone"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/imageView32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline15"
+        android:layout_marginStart="3dp"
+        android:paddingTop="6dp"
+        android:text="nhhh"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtContent"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@id/txtForward"/>
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/guideline15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vNewLine"/>
+    <TextView
+        android:id="@+id/txtTimeChatM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/txtSenderName"
+        app:layout_constraintTop_toBottomOf="@id/vNewLine" />
+
+    <TextView
+        android:id="@+id/txtSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline15"
+        app:layout_constraintTop_toTopOf="@+id/imageView32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+    <TextView
+        android:id="@+id/txtForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="5dp"
+        android:text="Forwarded"
+        android:textColor="#909692"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/guideline15"
+        app:layout_constraintTop_toBottomOf="@id/txtSenderName"
+        app:layout_constraintBottom_toTopOf="@id/txtContent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/VoiceNoteLayout"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:minHeight="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@id/txtContent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/voice_note_border"
+        app:cardCornerRadius="10dp">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/voicenote_speed_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/playChat1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_outline_play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:elevation="100dp"
+            android:indeterminate="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:progressTint="@color/fax_failed"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView40"
+            app:layout_constraintStart_toEndOf="@+id/playChat1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Chronometer
+            android:id="@+id/timeRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include"
+            app:layout_constraintTop_toTopOf="parent" /-->
+
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:text="00:00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/include"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:id="@+id/imgRV"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/reactionRecycler"
+        app:layout_constraintTop_toBottomOf="@id/VoiceNoteLayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+ />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/reactionRecycler"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/imgRV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reply_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:elevation="15dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@id/reactionRecycler">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtLastReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Last Reply: 1234"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewReply"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLastReply"
+                tools:listitem="@layout/reply_initials_icon" />
+            <TextView
+                android:id="@+id/number_replies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:paddingTop="3dp"
+                android:text="2 Replies"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerViewReply"
+                app:layout_constraintStart_toEndOf="@+id/recyclerViewReply"
+                app:layout_constraintTop_toTopOf="@+id/recyclerViewReply"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

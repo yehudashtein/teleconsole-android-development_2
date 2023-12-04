@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".controller.dashboard.ChatFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/team_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginEnd="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/team_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/teamHeader"
+                app:layout_constraintBottom_toBottomOf="@id/teamHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+
+                android:id="@+id/teamHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="16dp"
+                android:text="Theme message"
+                app:layout_constraintBottom_toTopOf="@+id/teamRecycler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dropdownbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/expand_selection"
+                android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                app:layout_constraintBottom_toBottomOf="@+id/teamHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/teamHeader" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/teamRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/dropdownbutton"
+                app:layout_constraintStart_toStartOf="@+id/teamHeader"
+                app:layout_constraintTop_toBottomOf="@+id/teamHeader" />
+
+            <ImageView
+                android:id="@+id/imageView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="194dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/ic_add4"
+                app:layout_constraintBottom_toTopOf="@+id/teamRecycler"
+                app:layout_constraintEnd_toStartOf="@+id/dropdownbutton"
+                app:layout_constraintStart_toEndOf="@+id/teamHeader"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/direct_card"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_card"
+        tools:layout_marginEnd="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/direct_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/directHeader"
+                app:layout_constraintBottom_toBottomOf="@id/directHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/directHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="16dp"
+                android:text="Direct message"
+                app:layout_constraintBottom_toTopOf="@+id/directRecycler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/directDropdownbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/hide_selection"
+                android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                app:layout_constraintBottom_toBottomOf="@+id/directHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/directHeader" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/directRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/directDropdownbutton"
+                app:layout_constraintStart_toStartOf="@+id/directHeader"
+                app:layout_constraintTop_toBottomOf="@+id/directHeader" />
+
+            <ImageView
+                android:id="@+id/imageView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="203dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/ic_add4"
+                app:layout_constraintBottom_toTopOf="@+id/directRecycler"
+                app:layout_constraintEnd_toStartOf="@+id/directDropdownbutton"
+                app:layout_constraintStart_toEndOf="@+id/directHeader"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

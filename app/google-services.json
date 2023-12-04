@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "195037108591",
+    "firebase_url": "https://teleconsole.firebaseio.com",
+    "project_id": "teleconsole",
+    "storage_bucket": "teleconsole.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195037108591:android:e805d806a44b956b",
+        "android_client_info": {
+          "package_name": "com.telebroad.teleconsole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195037108591-952ir81ni1ovf5l207he3hinhhbvbjt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsD19PwYYty_Mm51cPV21qSoJdK8dRIKQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195037108591:android:6a21d2bff217a488",
+        "android_client_info": {
+          "package_name": "com.teleconsole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195037108591-47500fshicjhinrpij28i2fqpbv146n0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teleconsole",
+            "certificate_hash": "fe4d21f74f6b5ffa8d72545e7872e3e5be19786d"
+          }
+        },
+        {
+          "client_id": "195037108591-952ir81ni1ovf5l207he3hinhhbvbjt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsD19PwYYty_Mm51cPV21qSoJdK8dRIKQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195037108591-onrvrq3068jji9kt6nht7us1df42tu5c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.telebroad.teleconsole"
+              }
+            },
+            {
+              "client_id": "195037108591-952ir81ni1ovf5l207he3hinhhbvbjt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/channels">
+        <MultiSelectListPreference
+            android:dialogTitle="Select Voicemails"
+            android:icon="@drawable/ic_voicemail"
+            android:key="voicemail"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:summary="Select which voicemail boxes to listen to"
+            android:title="Voicemail" />
+        <MultiSelectListPreference
+            android:dialogTitle="Select Fax Lines"
+            android:icon="@drawable/ic_fax"
+            android:key="fax"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:summary="Select which fax lines to listen to"
+            android:title="eFax" />
+        <MultiSelectListPreference
+            android:dialogTitle="Select SMS"
+            android:icon="@drawable/ic_messages"
+            android:key="sms"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:summary="Select which SMS lines to listen to"
+            android:title="SMS"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/general">
+        <ListPreference android:icon="@drawable/ic_phone_sms"
+            android:title="@string/default_sms_title"
+            android:key="defaultSMS"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:summary="@string/default_sms_summary"/>
+        <ListPreference android:icon="@drawable/ic_caller_id"
+            android:title="@string/caller_id_title"
+            android:persistent="false"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:summary="@string/caller_id_summary"
+            android:key="CallerID"/>
+        <ListPreference android:icon="@drawable/ic_sip_phone"
+            android:title="@string/phone_line"
+            android:key="phone_line"
+            android:entries="@array/empty_array"
+            android:entryValues="@array/empty_array"
+            android:persistent="true"
+            android:summary="@string/phone_line_summary"/>
+        <SwitchPreference
+            android:icon="@drawable/ic_phone_transfer"
+            android:summary="@string/forward_summary_negative"
+            android:key="forward"
+            android:title="@string/forward_title"
+            android:persistent="false"
+            />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/local_settings">
+        <!--PreferenceScreen android:key="@string/notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/notifications">
+        </PreferenceScreen-->
+       <MultiSelectListPreference
+           android:icon="@drawable/ic_notifications"
+           android:key="@string/notifications"
+           android:title="@string/notifications"
+           android:summary="Select which kind of notifications you want to receive"
+           android:entries="@array/notifications_array"
+           android:entryValues="@array/notifications_array"
+           android:defaultValue="@array/notifications_array"/>
+        <ListPreference
+            android:icon="@drawable/ic_ring_volume"
+            android:key="@string/ring_volume_key"
+            android:title="@string/ring_volume_title"
+            android:entries="@array/ringtone"
+            android:entryValues="@array/ringtone"
+            android:defaultValue="@string/ringtone_both"
+            android:summary="@string/ring_volume_summary"
+            />
+        <com.telebroad.teleconsole.helpers.ListMessagePreference
+            android:icon="@drawable/cell_wifi"
+            android:key="@string/voip_key"
+            android:dialogTitle="@string/voip_title"
+            android:entries="@array/voip_entries"
+            android:entryValues="@array/voip_values"
+            android:defaultValue="@string/voip_always"
+            android:title="@string/voip_title"
+            android:summary="@string/voip_summary"
+            />
+        <ListPreference
+            android:icon="@drawable/ic_call_quality"
+            android:key="quality"
+            android:title="@string/call_quality_title"
+            android:dialogTitle="@string/call_quality_title"
+            android:entries="@array/call_quality_entries"
+            android:entryValues="@array/call_quality_values"
+            android:defaultValue="@string/medium"
+            android:summary="@string/call_quality_summary"/>
+        <EditTextPreference
+            android:key="@string/cell_number_key"
+            android:icon="@drawable/ic_cell_number"
+            android:title="@string/cell_number_title"
+            android:inputType="phone"
+            android:hint="Testing"
+            android:summary="@string/cell_number_summary"/>
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_security_black"
+            android:defaultValue="false"
+            android:summary="Prevent your ISP from blocking VoIP calls."
+            android:key="tls"
+            android:title="TLS Encryption"
+            android:persistent="false"
+            />
+        <Preference android:title="@string/system_settings_title"
+            android:icon="@drawable/ic_settings"
+            android:summary="@string/system_settings_summary"
+            >
+            <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+                android:data="package:com.telebroad.teleconsole"
+                />
+        </Preference>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

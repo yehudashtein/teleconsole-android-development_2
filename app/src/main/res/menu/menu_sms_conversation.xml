@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_delete_black"
+        android:orderInCategory="500"/>
+    <item
+        android:id="@+id/call"
+        android:title="@string/call"
+        android:icon="@drawable/ic_call_black"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="200"
+        />
+    <item
+        android:id="@+id/viewContact"
+        android:title="@string/view_contact"
+        android:icon="@drawable/ic_person_black"
+        app:showAsAction="never"
+        android:orderInCategory="300"/>
+    <item
+        android:id="@+id/blockContact"
+        android:title="@string/block_number"
+        android:icon="@drawable/ic_baseline_block_24"
+        app:showAsAction="never"
+        android:orderInCategory="350"/>
+    <item
+        android:id="@+id/mark_unread"
+        android:title="@string/mark_conversation_as_unread"
+        app:showAsAction="never"
+        android:orderInCategory="375"/>
+    <!--
+    TODO add contact.
+    -->
+</menu>

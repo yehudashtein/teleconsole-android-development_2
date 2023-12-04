@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryAdaptable">#263238</color>
+    <color name="colorPrimaryDarkAdaptable">#000a12</color>
+    <color name="colorPrimaryLightAdaptable">#4f5b62</color>
+    <color name="colorRegularTextAdaptable">#DDDDDD</color>
+    <color name="colorStrongTextAdaptable">#FFFFFF</color>
+    <color name="colorPrimaryAdaptableInverse">#babdbe</color>
+    <color name="colorPrimaryDarkAdaptableInverse">#eceff1</color>
+    <color name="colorPrimaryLightAdaptableInverse">#4f5b62</color>
+    <color name="colorRegularTextAdaptableInverse">#DDDDDD</color>
+    <color name="colorStrongTextAdaptableInverse">#FFFFFF</color>
+    <color name="unread">#fff</color>
+    <color name="white">#000</color>
+    <color name="black">#fff</color>
+    <color name="TabLayoutWhite">#212121</color>
+<!--    <color name="colorPrimary">#263238</color>-->
+<!--    <color name="colorPrimaryDark">#000a12</color>-->
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="darkerGray">#fff</color>
+    <color name="colorPrimaryLight">#fff</color>
+    <color name="sms_incoming_background">#000</color>
+    <color name="colorPrimaryTransparent">#fff</color>
+    <color name="sms_dark_theme_color">#fff</color>
+    <bool name="statusBarLight">false</bool>
+</resources>

@@ -1,0 +1,456 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="buttonTint">@color/black</item>
+        <item name="background">@color/black</item>
+        <item name="backgroundColor">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:alertDialogTheme">@style/DialogStyle</item>
+        <item name="alertDialogButtonGroupStyle">@style/DialogStyle</item>
+        <item name="searchViewStyle">@style/AppTheme.SearchView</item>
+        <item name="autoCompleteTextViewStyle">@style/AppTheme.SearchView</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="preferenceTheme">@style/AppTheme.Preference</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="android:listPopupWindowStyle">@style/AppTheme.ListPopupWindowStyle</item>
+        <item name="preferenceCategoryStyle">@style/AppTheme.Preference.Category</item>
+        <item name="android:actionBarStyle">@style/MyActionBarMain</item>
+
+
+    </style>
+    <style name="MyActionBarMain" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">#000000</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="CustomDialogButton" parent="Widget.AppCompat.Button">
+
+        <item name="backgroundTint">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+    <style name="Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <!-- Primary brand color. -->
+        <!--item name="colorOnPrimary">@color/white</item-->
+        <!--item name="android:windowTranslucentNavigation">true</item-->
+        <!--item name="android:windowTranslucentStatus">true</item-->
+        <!--item name="android:navigationBarColor">@color/white</item-->
+        <!--item name="android:windowLightStatusBar">true</item-->
+        <!--item name="android:statusBarColor">@android:color/white</item-->
+    </style>
+        <!-- Secondary brand color. -->
+        <!--item name="colorOnSecondary">@color/black</item-->
+        <!-- Status bar color. -->
+        <!--item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item-->
+        <!-- Customize your theme here. -->
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/round_corners_button</item>
+        <item name="color">@color/black</item>
+        <item name="buttonTint">@color/black</item>
+    </style>
+
+
+    <style name="AppTheme.DropDownViewStyle" parent="Widget.AppCompat.Light.ListView.DropDown">
+        <!--item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:height">88dp</item>
+        <item name="android:dropDownHeight">88dp</item>
+        <item name="android:layout_height">88dp</item-->
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="AppTheme.ListPopupWindowStyle" parent="Widget.AppCompat.Light.ListPopupWindow">
+        <!--item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:height">88dp</item>
+        <item name="android:dropDownHeight">88dp</item>
+        <item name="android:layout_height">88dp</item-->
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="AppTheme.Preference" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:tint">@color/colorPrimary</item>
+        <item name="android:alpha">1.0</item>
+        <item name="preferenceCategoryStyle">@style/AppTheme.Preference.Category</item>
+        <!--item name="preferenceFragmentListStyle">@style/AppTheme.Preference.Category</item-->
+        <item name="android:listViewStyle">@style/AppTheme.Preference.Category</item>
+        <item name="android:listSeparatorTextViewStyle">@style/AppTheme.Preference.Category</item>
+        <!--item name="android:preferenceStyle">@style/AppTheme.Preference.Category</item-->
+    </style>
+
+    <style name="AppTheme.Preference.Category" parent="Preference.Category.Material">
+        <item name="android:listPreferredItemPaddingStart">96dp</item>
+        <item name="android:paddingStart">96dp</item>
+        <item name="android:layout_marginStart">96dp</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+        <item name="layout">@layout/preference_header</item>
+    </style>
+
+    <style name="AppTheme.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:cursorVisible">true</item>
+        <item name="android:colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:queryBackground">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="closeIcon">@android:color/transparent</item>
+    </style>
+    <style name="AppTheme.EditProfile">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorSurface">@color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:searchViewStyle">@style/AppTheme.SearchView</item>
+        <item name="autoCompleteTextViewStyle">@style/AppTheme.SearchView</item>
+        <item name="preferenceCategoryStyle">@style/AppTheme.Preference.Category</item>
+        <item name="android:dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="preferenceTheme">@style/AppTheme.Preference</item>
+    </style>
+
+    <style name="AppThemeNoActionBar.Launcher">
+        <item name="android:textColorAlertDialogListItem">@color/black</item>
+
+        <item name="android:listPopupWindowStyle">@style/AppTheme.ListPopupWindowStyle</item>
+        <item name="colorPrimaryDark">@color/colorSplashBG</item>
+        <item name="colorPrimary">@color/colorSplashBG</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:searchViewStyle">@style/AppTheme.SearchView</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AppTheme.SearchView</item>
+        <item name="preferenceTheme">@style/AppTheme.Preference</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkAdaptable</item>
+        <item name="android:windowLightStatusBar">@bool/statusBarLight</item>
+        <item name="android:dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="preferenceCategoryStyle">@style/AppTheme.Preference.Category</item>
+    </style>
+
+
+
+    <style name="LoginEditStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+<!--    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+<!--        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>-->
+<!--        <item name="android:buttonBarPositiveButtonStyle">@style/NegativeButtonStyle</item>-->
+<!--        <item name="android:textSize">18sp</item>-->
+<!--&lt;!&ndash;        <item name="colorAccent">@color/black</item>&ndash;&gt;-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:colorPrimary">@color/black</item>-->
+<!--        <item name="android:buttonTint">@color/black</item>-->
+<!--        <item name="android:textColorPrimary">@color/black</item>-->
+<!--        <item name="colorControlNormal">@color/black</item>-->
+<!--        <item name="buttonTint">@color/black</item>-->
+<!--        <item name="colorPrimaryDark">@color/black</item>-->
+<!--        <item name="colorSurface">@color/black</item>-->
+<!--    </style>-->
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="android:textSize">18sp</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="buttonTint">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+<!--        <item name="colorSurface">@color/black</item>-->
+    </style>
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="android:buttonTint">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="buttonTint">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+
+    <style name="ContactDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SMSChooserDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:listPreferredItemHeight">20dp</item>
+        <item name="android:checkedTextViewStyle">@style/SmallTextDialogChooser</item>
+    </style>
+
+    <style name="SmallTextDialogChooser">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/black</item>
+    </style>
+<!--    <item name="android:itemTextAppearance">@style/myCustomMenuTextAppearance</item>-->
+    <style name="MyActionModeTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Style for ActionMode Subtitle Text -->
+    <style name="MyActionModeSubtitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionMode.Subtitle">
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+    <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/colorPrimary1</item>
+        <item name="titleTextStyle">@style/MyActionModeTitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/MyActionModeSubtitleTextStyle</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:listPopupWindowStyle">@style/AppTheme.ListPopupWindowStyle</item>
+        <item name="windowActionBar">false</item>
+
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionModeBackground">@color/black</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:searchViewStyle">@style/AppTheme.SearchView</item>
+        <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
+        <item name="android:autoCompleteTextViewStyle">@style/cursorColor</item>
+        <item name="android:dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="dropDownListViewStyle">@style/AppTheme.DropDownViewStyle</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/colorPrimaryDark</item>
+        <item name="preferenceTheme">@style/AppTheme.Preference</item>
+        <item name="preferenceCategoryStyle">@style/AppTheme.Preference.Category</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+    </style>
+<!--    <item name="bottomNavigationStyle">@style/AppTheme.BottomNavigation</item>-->
+
+    <style name="AppTheme.BottomNavigation" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="iconTint">@color/dark_gray</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="cursorColor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="NewContact" parent="AppTheme.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:spinnerItemStyle">@style/NewContactSpinnerLook</item>
+    </style>
+    <style name="MySpinnerLook" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+    <style name="NewContactSpinnerLook" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
+        <item name="android:autoCompleteTextViewStyle">@style/cursorColor</item>
+    </style>
+
+    <style name="AlertDialog.AppCompat.Light.Login">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:paddingStart">36dp</item>
+        <item name="android:paddingEnd">36dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="WhiteActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="BottomNavigationTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="AppTheme.Voicemail" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="colorPrimaryDark">@color/voicemail_dark_theme_color</item>
+        <item name="colorPrimary">@color/voicemail_theme_color</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+    <style name="AppTheme.OpenMMSImage" parent="AppTheme">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@color/mms_primary_color</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:actionBarStyle">@style/TransparentActionBar</item>
+        <!-- If you're using the AppCompat library, also include this line -->
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
+    </style>
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/slight_darkness</item>
+        <!-- If you're using the AppCompat library, also include this line -->
+        <item name="background">@color/slight_darkness</item>
+
+    </style>
+    <style name="AppTheme.CreateTeam" parent="AppTheme">
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:actionModeBackground">@android:color/white</item>
+        <item name="actionBarTheme">@style/WhiteActionBar</item>
+        <item name="colorPrimaryDark">@color/sms_dark_theme_color</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+    <style name="MyCustomTabText" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabMaxWidth">120dp</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabTextAppearance">@style/MyCustomTextAppearance</item>
+    </style>
+
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item> <!-- Define your text size here -->
+    </style>
+
+    <style name="AppTheme.Search" parent="AppTheme">
+        <item name="actionBarStyle">@style/MyActionBarSearch</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:actionModeBackground">@android:color/white</item>
+        <item name="actionBarTheme">@style/MyActionBarSearch</item>
+        <item name="colorPrimaryDark">@color/sms_dark_theme_color</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+    <style name="MyActionBarSearch" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@color/white</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:textColor">@color/sms_dark_theme_color</item>
+        <item name="android:titleTextColor">@android:color/black</item>
+    </style>
+    <style name="MyActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@color/white</item>
+        <item name="android:titleTextColor">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+
+    <style name="AppTheme.SMS" parent="Theme.AppCompat.DayNight">
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="alertDialogStyle">@style/DialogStyle</item>
+        <item name="alertDialogTheme">@style/DialogStyle</item>
+        <item name="alertDialogButtonGroupStyle">@style/DialogStyle</item>
+        <item name="android:actionModeBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+
+        <item name="colorPrimaryDark">@color/sms_dark_theme_color</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.NewContact" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/md_divider_white</item>
+        <item name="colorPrimary">@android:color/white</item>
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AlertTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertEditTextStyle">
+        <item name="android:padding">24dp</item>
+        <item name="android:layout_margin">24dp</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+       <item name="backgroundTint">@color/white</item>
+        <item name="background">@drawable/dialog_bg</item>
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">18dp</item>
+        <item name="cornerSizeTopLeft">18dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="paddingStart">10dp</item>
+        <item name="paddingEnd">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="AlertCallForwardingStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimaryLight</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:windowTitleStyle">@style/AlertTitleTextStyle</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:textViewStyle">@style/AlertEditTextStyle</item>
+    </style>
+    <style name="CustomProgressDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/progress_dialog_bg</item>
+        <!-- You can customize other attributes here -->
+    </style>
+
+</resources>

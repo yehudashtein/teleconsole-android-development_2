@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.telebroad.teleconsole.viewmodels.MessageViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:animateLayoutChanges="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@{viewmodel.getDrawable(viewmodel.iconBackgroundResource)}"
+            android:contentDescription="@{viewmodel.type()}"
+            android:padding="8dp"
+            android:src="@{viewmodel.getDrawable(viewmodel.iconResource)}"
+            android:tag="1"
+            app:layout_constraintBottom_toTopOf="@+id/lineBreak"
+            app:layout_constraintDimensionRatio="W, 1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@android:color/white"
+            tools:srcCompat="@drawable/ic_messages" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:tag="2"
+            android:text="@{viewmodel.otherName}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/infoTextView"
+            app:layout_constraintEnd_toStartOf="@+id/timeTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/blockView"
+            app:layout_constraintTop_toTopOf="@+id/iconImageView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="hello "/>
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:tag="3"
+            android:text="@{viewmodel.info}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12.5sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+            app:layout_constraintEnd_toStartOf="@+id/timeTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/group6"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+            tools:text="little text" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:tag="4"
+            android:text="@{viewmodel.time}"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nameTextView"
+            tools:text="1 hour ago" />
+
+
+        <View
+            android:id="@+id/lineBreak"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryTransparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconImageView" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="imageViewGroup1,textViewGroup1"
+            app:layout_constraintBottom_toBottomOf="@id/group3"
+            app:layout_constraintEnd_toStartOf="@id/group2"
+            app:layout_constraintStart_toStartOf="@+id/iconImageView"
+            app:layout_constraintTop_toTopOf="@id/group3" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:constraint_referenced_ids="imageViewGroup2,textViewGroup2"
+            app:layout_constraintBottom_toBottomOf="@+id/group3"
+            app:layout_constraintEnd_toStartOf="@id/group3"
+            app:layout_constraintStart_toEndOf="@+id/group1"
+            app:layout_constraintTop_toTopOf="@+id/group3"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="imageViewGroup3,textViewGroup3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/timeTextView"
+            app:layout_constraintStart_toEndOf="@+id/group2"
+            app:layout_constraintTop_toTopOf="@+id/lineBreak" />
+
+        <ImageView
+            android:id="@+id/imageViewGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/textViewGroup1"
+            app:layout_constraintEnd_toEndOf="@+id/group1"
+            app:layout_constraintStart_toStartOf="@+id/group1"
+            app:layout_constraintTop_toTopOf="@id/group1"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_call"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/group1"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGroup1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGroup1"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGroup1" />
+
+        <ImageView
+            android:id="@+id/imageViewGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/textViewGroup2"
+            app:layout_constraintEnd_toEndOf="@+id/group2"
+            app:layout_constraintStart_toStartOf="@+id/group2"
+            app:layout_constraintTop_toTopOf="@id/group2"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_message"
+            app:tint="@color/primary_color_disableable"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textViewGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_sms"
+            android:textSize="12sp"
+            android:tint="@color/primary_color_disableable"
+            app:layout_constraintBottom_toBottomOf="@+id/group2"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGroup2"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGroup2"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGroup2"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageViewGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewGroup3"
+            app:layout_constraintEnd_toEndOf="@+id/group3"
+            app:layout_constraintStart_toStartOf="@+id/group3"
+            app:layout_constraintTop_toTopOf="@id/group3"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_person_black"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/contact"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/group3"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGroup3"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGroup3"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGroup3" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="group1,group3,textViewGroup1,imageViewGroup1,textViewGroup3,imageViewGroup3,lineBreak"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/blockView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:contentDescription="@string/conversation_blocked"
+            android:visibility="@{viewmodel.blockedVisibility}"
+            app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+            app:layout_constraintDimensionRatio="H1,1"
+            app:layout_constraintStart_toStartOf="@+id/group6"
+            app:layout_constraintTop_toTopOf="@+id/nameTextView"
+            app:srcCompat="@drawable/ic_baseline_block_24"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:constraint_referenced_ids="nameTextView"
+            app:layout_constraintStart_toEndOf="@+id/iconImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

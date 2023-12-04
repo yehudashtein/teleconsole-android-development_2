@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDarkAdaptable"
+    tools:context=".controller.login.ResetPasswordActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <TextView
+        android:id="@+id/line_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/forgot_your_password"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textColor="@color/colorPrimaryDarkAdaptableInverse"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView35"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        style="@style/LoginEditStyle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/login_border"
+        android:drawableStart="@drawable/ic_messages_white"
+        android:drawablePadding="16dp"
+        android:drawableTint="@color/colorPrimaryDarkAdaptableInverse"
+        android:ems="10"
+        android:hint="@string/account_email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/colorPrimaryDarkAdaptableInverse"
+        android:textColorHint="@color/colorPrimaryAdaptableInverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <Button
+        android:id="@+id/resetButtton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/signin_background"
+        android:text="@string/reset_password"
+        android:textColor="@color/colorPrimaryDarkAdaptable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/reset_password_subtitle"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryAdaptableInverse"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/line_info" />
+</androidx.constraintlayout.widget.ConstraintLayout>

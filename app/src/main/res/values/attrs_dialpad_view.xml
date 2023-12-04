@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="DialPadView">
+        <attr name="showLastCalledNumber" format="boolean" />
+        <attr name="saveLastCalledNumber" format="boolean" />
+        <attr name="callAction" format="enum">
+            <enum name="firstCall" value="0"/>
+            <enum name="secondCall" value="1"/>
+            <enum name="transfer" value="2"/>
+            <enum name="conference" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

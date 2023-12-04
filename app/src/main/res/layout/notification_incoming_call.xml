@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/ringing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:text="Ringing"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+    <TextView
+        android:id="@+id/number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ringing_text"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        tools:text="212-444-9911"
+        android:textAppearance="@style/TextAppearance.Compat.Notification" />
+
+    <LinearLayout
+        style='"?android:attr/buttonBarStyle"'
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_text"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/declineButton"
+            style='"?android:attr/buttonBarButtonStyle"'
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#BF360C"
+
+            android:background="@drawable/bg_answer_notif"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/decline"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:id="@+id/answerButton"
+            style='"?android:attr/buttonBarButtonStyle"'
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1e8e3e"
+            android:background="@drawable/bg_answer_notif"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/answer"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>

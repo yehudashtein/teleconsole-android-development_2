@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.telebroad.teleconsole.viewmodels.NewContactViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controller.NewContactActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/new_contact_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundTint="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/contact_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/new_contact"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:contentDescription="@string/done"
+                app:tint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/ic_check" />
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/done"
+                android:padding="8dp"
+                app:tint="@color/colorPrimaryDark"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_delete" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_contact_toolbar"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="1dp"
+                    android:layout_height="8dp"
+                    android:alpha="0"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="42dp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="1dp"
+                    android:layout_height="8dp"
+                    android:alpha="0"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_grey_circle"
+                    android:backgroundTint="@color/colorGrey"
+                    android:padding="12dp"
+                    app:tint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_person_black" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout5"
+                    app:srcCompat="@drawable/ic_person_black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView21"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView20">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/firstNameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/first_name"
+                        android:includeFontPadding="true"
+                        android:inputType="textPersonName"
+                        android:paddingBottom="18dp"
+                        android:text="@={contact.firstName}"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lastNameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/last_name"
+                        android:includeFontPadding="true"
+                        android:inputType="textPersonName"
+                        android:paddingBottom="18dp"
+                        android:text="@={contact.lastName}"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/companyTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/company"
+                        android:text="@={contact.company}"
+                        android:includeFontPadding="true"
+                        android:paddingBottom="18dp"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/phone_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_phone_new_contact" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/email_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/phone_recycler"
+                    app:layout_constraintStart_toStartOf="@+id/phone_recycler"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_recycler"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_email_new" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/email_recycler"
+                    app:srcCompat="@drawable/ic_messages" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:checked="@={contact.public}"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout7"
+                    app:layout_constraintStart_toStartOf="@+id/imageView21"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout7"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/ic_business" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/contact_public_switch"
+                    app:layout_constraintStart_toStartOf="@+id/email_recycler"
+                    app:layout_constraintTop_toBottomOf="@+id/email_recycler" />
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:tint="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/imageView22"
+                    app:layout_constraintTop_toTopOf="@+id/phone_recycler"
+                    app:srcCompat="@drawable/ic_call" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

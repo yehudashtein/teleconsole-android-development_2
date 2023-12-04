@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Muhammet Ali YÜCE on 3/5/19 4:26 PM
+  ~  * on Github: /mayuce
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 3/5/19 4:14 PM
+  ~  */
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202124"
+    tools:context=".ImageCropActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#202124"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:context=".ImageCropActivity">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="8">
+
+            <FrameLayout
+                android:id="@+id/holderImageCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true" />
+            </FrameLayout>
+
+            <team.clevel.documentscanner.libraries.PolygonView
+                android:id="@+id/polygonView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnImageCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:foreground="?android:selectableItemBackground"
+                android:minWidth="150dp"
+                android:text="@string/image_crop"
+                android:textColor="#202124" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/halfTransparentBackground"
+        android:padding="100dp" />
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="name of group"
+        app:layout_constraintEnd_toStartOf="@id/buttonView"
+        app:layout_constraintHorizontal_bias="0.00"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txtNomMembers"
+        android:text="nomber of members "
+
+        app:layout_constraintHorizontal_bias="0.00"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+    <TextView
+        android:id="@+id/joined"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:gravity="center"
+        android:text="joined"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonView"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toEndOf="@id/textView46"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <Button
+        android:id="@+id/buttonJoin"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/call_missed_color"
+        android:text="Join"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:text="View"
+        android:textColor="@color/oldColorPrimaryDark"
+        android:backgroundTint="@color/offlineGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonJoin"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/offlineGray"
+        android:textColor="@color/oldColorPrimaryDark"
+        android:text="Access"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/btnAccess"
+        app:layout_constraintHorizontal_bias="0.990"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "client_id": "4953e24a-541e-472d-a781-0a6f7fc6709d",
+  "authorization_user_agent": "DEFAULT",
+  "redirect_uri" : "msauth://com.telebroad.teleconsole/i2EmVJ98hkvcrPV0Sb3cdxgks7E%3D",
+  "account_mode" : "SINGLE",
+  "authorities": [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADandPersonalMicrosoftAccount",
+        "tenant_id": "common"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_iv"
+    android:layout_width="48dp" android:layout_height="48dp"
+    android:paddingBottom="1.5dp"
+    style="@android:style/Widget.ActionButton"
+    android:contentDescription="@string/download"
+    android:src="@drawable/download"
+    >
+</ImageView>

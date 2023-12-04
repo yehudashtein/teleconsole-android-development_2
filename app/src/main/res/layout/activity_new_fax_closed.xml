@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.NewFaxActivity">
+
+    <EditText
+        android:id="@+id/receiverText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:ems="10"
+        android:hint="@string/receiver_hint"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords|textVisiblePassword|textNoSuggestions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/callerID"
+        tools:targetApi="o">
+
+        <requestFocus />
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/callerID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:padding="4dp"
+        android:text="@string/loading"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="4dp"
+        app:layout_constraintStart_toStartOf="@+id/receiverText"
+        app:layout_constraintTop_toBottomOf="@+id/receiverText"
+        tools:text="Sample File" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/fabAttach"
+        app:layout_constraintStart_toStartOf="@+id/fabAttach"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach"
+        app:srcCompat="@drawable/ic_add_photo" />
+
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:text="@string/take_a_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/fabAttach"
+        app:layout_constraintStart_toStartOf="@+id/fabAttach"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton3"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton3"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach"
+        app:srcCompat="@drawable/ic_photo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton4"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach"
+        app:srcCompat="@drawable/ic_file" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:text="@string/attach_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/fabAttach"
+        app:layout_constraintStart_toStartOf="@+id/fabAttach"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:text="@string/attach_file"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAttach"
+        app:layout_constraintEnd_toEndOf="@+id/fabAttach"
+        app:layout_constraintStart_toStartOf="@+id/fabAttach"
+        app:layout_constraintTop_toTopOf="@+id/fabAttach" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAttach"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_attach_file"
+        app:useCompatPadding="false" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="textView19,textView18" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="@+id/receiverText"
+        app:layout_constraintTop_toTopOf="@+id/textView17"
+        app:srcCompat="@drawable/ic_delete"
+        android:contentDescription="@string/remove_file" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

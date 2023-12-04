@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/saveIm"
+        android:title="@string/download"
+        app:showAsAction="always"
+        app:actionLayout="@layout/download_menu"
+        android:icon="@drawable/download"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        app:showAsAction="always"
+        android:icon="?attr/actionModeShareDrawable"/>
+    <item
+        android:id="@+id/imageForward"
+        android:icon="@drawable/ic_white_forward_24"
+        app:showAsAction="always"
+        android:title="Forward"/>
+    <item
+        android:id="@+id/imageEdit"
+        android:icon="@drawable/ic_edit_black_24dp"
+        app:showAsAction="always"
+        android:title="Edit"/>
+    <item
+        android:id="@+id/imageDelete"
+        android:icon="@drawable/ic_white_delete_24"
+        app:showAsAction="always"
+        android:title="Delete"/>
+
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/teleconsole-android-development_1.iml" filepath="$PROJECT_DIR$/.idea/modules/teleconsole-android-development_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/teleconsole-android-development_1.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.iml" filepath="$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.main.iml" filepath="$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/documentscanner/teleconsole-android-development_1.documentscanner.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary/teleconsole-android-development_1.openCVLibrary.unitTest.iml" />
+    </modules>
+  </component>
+</project>

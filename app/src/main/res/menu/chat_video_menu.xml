@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/saveIm"
+        android:title="@string/download"
+        app:showAsAction="ifRoom"
+        app:actionLayout="@layout/download_menu"
+        android:icon="@drawable/download"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        app:showAsAction="always"
+        android:icon="?attr/actionModeShareDrawable"/>
+    <item
+        android:id="@+id/forward"
+        android:title="@string/share"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_forward"/>
+
+</menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/download"
+        android:title="@string/save"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="never"
+        android:orderInCategory="50"/>
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="never"
+        android:orderInCategory="300"/>
+    <item
+        android:id="@+id/fax"
+        android:icon="@drawable/ic_forward"
+        android:orderInCategory="100"
+        android:title="@string/forward_fax"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/viewContact"
+        android:title="@string/add_contact"
+        android:icon="@drawable/ic_person_add"
+        app:showAsAction="never"
+        android:orderInCategory="200"/>
+    <item android:id="@+id/share"
+        android:title="@string/share"
+        android:orderInCategory="250"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:width="8dp"
+    android:height="8dp"
+    android:alpha="1"
+    android:viewportHeight="25.0"
+    android:viewportWidth="25.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="@color/sms_theme_color"
+        android:pathData="M25, 0 0,25 0, 0z" />
+
+</vector>

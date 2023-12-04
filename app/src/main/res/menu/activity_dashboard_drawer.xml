@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_edit_profile"
+        android:icon="@drawable/ic_person_black"
+        android:title="@string/edit_profile" />
+    <group>
+        <item
+            android:id="@+id/nav_DND"
+            android:icon="@drawable/ic_phone_locked"
+            android:title="@string/do_not_disturb"
+            app:actionLayout="@layout/menu_dnd" />
+        <item
+            android:id="@+id/nav_direct_calls"
+            android:icon="@drawable/ic_direct_call"
+            android:title="@string/direct_calls_only"
+            app:actionLayout="@layout/menu_dnd" />
+    </group>
+    <item
+        android:id="@+id/nav_documents"
+        android:icon="@drawable/ic_folder"
+        android:menuCategory="container"
+        android:visible="false"
+        android:title="@string/files" />
+
+    <item
+        android:id="@+id/nav_read"
+        android:icon="@drawable/ic_read_all"
+        android:title="@string/mark_all_as_read" />
+    <item
+        android:id="@+id/uploadLogs"
+        android:icon="@drawable/ic_upload_logs"
+        android:title="@string/upload_logs"
+        />
+</menu>

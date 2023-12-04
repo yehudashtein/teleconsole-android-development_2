@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="default_username">shlomie@telebroad.com</string>
+    <string name="default_password">tb9911212</string>
+    <string name="domain">push.telebroad.com</string>
+    <string name="base_url">https://webserv.telebroad.com/api/teleconsole/rest</string>
+
+    <string-array name="fragment_titles">
+        <item>Messages</item>
+        <item>Calls</item>
+        <item>Contacts</item>
+        <item>Chat</item>
+        <item>Settings</item>
+    </string-array>
+
+</resources>

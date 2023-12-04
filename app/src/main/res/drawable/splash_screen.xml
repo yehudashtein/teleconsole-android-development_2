@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/colorPrimaryDark1"/>
+
+    <!-- Your product logo - 144dp color version of your app icon -->
+    <item
+        android:right="10dp"
+        android:bottom="10dp"
+        android:left="10dp"
+        android:top="10dp"
+        android:drawable="@drawable/ic_telebroad_logo_only"
+        android:gravity="center">
+        <bitmap
+            android:src="@drawable/ic_launcher_foreground"
+            android:gravity="center"/>
+    </item>
+</layer-list>

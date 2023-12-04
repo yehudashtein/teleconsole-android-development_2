@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search1"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/mute"
+        android:title="Mute Notification's"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/Unmute"
+        android:title="Unmute Notification's"
+        app:showAsAction="never"/>
+
+</menu>

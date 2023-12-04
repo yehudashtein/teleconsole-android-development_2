@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activeCallConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202124"
+    tools:context=".controller.ActiveCallActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <!--View
+        android:id="@+id/darkener"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="@android:color/black" /-->
+
+    <TextView
+        android:id="@+id/caller_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:scrollHorizontally="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/test_name"
+        android:textSize="30sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@+id/call_duration"
+        app:layout_constraintEnd_toStartOf="@+id/leftGuideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rightGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Chronometer
+        android:id="@+id/call_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp"
+        android:format="%:%%"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/statusText"
+        app:layout_constraintTop_toBottomOf="@+id/caller_name" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/call_duration"
+        app:layout_constraintEnd_toStartOf="@+id/call_duration"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/call_duration"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dtmfTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/dtmf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caller_name"
+        tools:text="Testy test" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="113dp" />
+
+    <include
+        android:id="@+id/callControls"
+        layout="@layout/layout_call_controls"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibilty="gone" />
+
+    <include
+        android:id="@+id/dtmf"
+        layout="@layout/layout_dialpad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline"
+        app:layout_constraintWidth_max="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <ImageButton
+        android:id="@+id/hangup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_decline_icon"
+        android:contentDescription="@string/hangup"
+        android:elevation="16dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintEnd_toStartOf="@+id/leftGuideline"
+        app:layout_constraintHeight_max="100dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rightGuideline"
+        app:layout_constraintTop_toTopOf="@+id/bottomGuideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_max="76dp"
+        app:srcCompat="@drawable/ic_hangup" />
+
+    <TextView
+        android:id="@+id/hideDTMF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.0"
+        android:padding="10dp"
+        android:text="@string/hide"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/hangup"
+        app:layout_constraintEnd_toStartOf="@+id/leftGuideline"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/hangup"
+        app:layout_constraintTop_toTopOf="@+id/hangup" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/singleCaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="caller_name,call_duration"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/multipleCallers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="secondCallName,firstCallName,firstCallStatus,secondCallStatus, secondCallerView"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/firstCallName"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="marquee"
+
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/secondCallName"
+        app:layout_constraintEnd_toStartOf="@+id/firstCallStatus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rightGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Caller 1" />
+
+    <TextView
+        android:id="@+id/secondCallName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/callControls"
+        app:layout_constraintEnd_toStartOf="@+id/secondCallStatus"
+        app:layout_constraintStart_toStartOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/firstCallName"
+        tools:text="Caller 2" />
+
+    <TextView
+        android:id="@+id/secondCallStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/secondCallName"
+        app:layout_constraintEnd_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/secondCallName"
+        tools:text="On Hold" />
+
+    <View
+        android:id="@+id/secondCallerView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/callControls"
+        app:layout_constraintEnd_toEndOf="@+id/leftGuideline"
+        app:layout_constraintStart_toStartOf="@+id/rightGuideline"
+        app:layout_constraintTop_toTopOf="@+id/secondCallName" />
+
+    <Chronometer
+        android:id="@+id/firstCallStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:format="%:%%"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/firstCallName"
+        app:layout_constraintEnd_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/firstCallName"
+        tools:text="TextView" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
