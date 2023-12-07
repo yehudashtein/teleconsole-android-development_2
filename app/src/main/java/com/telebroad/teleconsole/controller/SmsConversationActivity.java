@@ -1695,18 +1695,28 @@ public class SmsConversationActivity extends AppCompatActivity {
             // TODO: 12/6/2023  from here
             String str = models.get(position).url();
             if ( str.length()>0 && Utils.isVidoeType(MimeTypeMap.getFileExtensionFromUrl(models.get(position).url()))) {
-                holder.binding.playButtonvideoView.setOnClickListener(v -> {
+                holder.binding.smsImg.setOnClickListener(v -> {
                     Intent intent = new Intent(SmsConversationActivity.this, MMSVideoViewActivity.class);
                     intent.putExtra(MMSVideoViewActivity.MMS_VIDEO_URL, str);
                     startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(SmsConversationActivity.this, holder.binding.smsImg, "beautifulAnimate").toBundle());
                 });
-                holder.binding.playButtonvideoView.setOnLongClickListener(v -> {
+
+                holder.binding.playButtonvideoView.setOnClickListener(v -> {
+                    holder.binding.smsImg.performClick();  });
+
+                holder.binding.smsImg.setOnLongClickListener(v -> {
                     int currentPosition = holder.getAbsoluteAdapterPosition();
                     if (listener != null && currentPosition != RecyclerView.NO_POSITION) {
                         listener.onChildItemClicked(position1, position);
                     }
                     return true;
                 });
+
+                holder.binding.playButtonvideoView.setOnLongClickListener(v -> {
+                    holder.binding.smsImg.performLongClick();
+                    return true;
+                }
+                );
             }
             else {
                 // TODO: 12/6/2023 up to here
