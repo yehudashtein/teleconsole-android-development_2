@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="viewmodel"
             type="com.telebroad.teleconsole.viewmodels.ConversationViewModel" />
@@ -10,14 +12,13 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:background="@color/colorGrey"
-        android:id="@+id/layout"
-        android:visibility="@{viewmodel.msgVisibility()}">
+        android:visibility="@{viewmodel.msgVisibility()}"
+        tools:background="@color/colorGrey">
 
         <TextView
-            android:textColorLink="@color/blue"
             android:id="@+id/msg_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,13 +26,14 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:autoLink="all"
-            android:textColor="@android:color/black"
             android:background="@drawable/bg_outgoing_text"
             android:paddingStart="8dp"
             android:paddingTop="8dp"
             android:paddingEnd="8dp"
             android:paddingBottom="8dp"
             android:text="@{viewmodel.msgData}"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/blue"
             android:textSize="16sp"
             android:visibility="@{viewmodel.msgDataVisibility()}"
             app:layout_constrainedWidth="true"
@@ -72,11 +74,11 @@
             app:layout_constraintGuide_percent="0.80" />
 
         <ImageView
-            android:elevation="2dp"
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:elevation="2dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/msg_data"
@@ -117,20 +119,20 @@
             app:layout_constraintTop_toBottomOf="@id/VoiceNoteLayout" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
             android:id="@+id/VoiceNoteLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/voice_note_border"
             android:visibility="@{viewmodel.audioVisibility()}"
+            app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/voice_note_border"
-            app:cardCornerRadius="10dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <include
                 android:id="@+id/include"
@@ -145,17 +147,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:padding="5dp"
-                app:backgroundTint="@color/sms_ic_bg"
                 android:id="@+id/playChat1"
-                android:layout_marginStart="5dp"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginStart="5dp"
                 android:background="?android:attr/selectableItemBackground"
+                android:padding="5dp"
                 android:src="@drawable/ic_baseline_play_circle_outline_blue"
+                app:backgroundTint="@color/sms_ic_bg"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/sb"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <SeekBar
@@ -163,14 +165,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:elevation="100dp"
-                android:progressBackgroundTint="@color/colorPrimaryLightAdaptableInverse"
                 android:indeterminate="false"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:progressBackgroundTint="@color/colorPrimaryLightAdaptableInverse"
                 android:progressTint="#5C6BC0"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
                 android:thumb="@drawable/thumb"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView40"

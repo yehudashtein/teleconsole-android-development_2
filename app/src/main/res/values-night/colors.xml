@@ -17,6 +17,7 @@
 <!--    <color name="colorPrimary">#263238</color>-->
 <!--    <color name="colorPrimaryDark">#000a12</color>-->
     <color name="colorPrimary">#fff</color>
+    <color name="prefCatBg">#263238</color>
     <color name="colorPrimaryDark">#fff</color>
     <color name="sms_message_selected">@color/colorPrimaryLightAdaptable</color>
     <color name="darkerGray">#fff</color>

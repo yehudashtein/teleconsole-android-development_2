@@ -43,7 +43,7 @@
                 app:layout_constrainedWidth="true"
                 android:transitionName="@{childItem.url()}"
                 app:customAttribute="@{childItem.url()}"
-                app:srcCompat="@drawable/login_background"
+                app:srcCompat="@drawable/video_play"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
