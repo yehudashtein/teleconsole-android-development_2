@@ -186,13 +186,13 @@
         <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
         <item name="android:buttonBarPositiveButtonStyle">@style/NegativeButtonStyle</item>
         <item name="android:textSize">18sp</item>
-        <item name="colorAccent">@color/black</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:colorPrimary">@color/black</item>
-        <item name="android:textColorPrimary">@color/black</item>
+<!--        <item name="colorAccent">@color/black</item>-->
+<!--        <item name="android:textColor">@color/black</item>-->
+        <item name="android:colorPrimary">@color/colorPrimaryAdaptable</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryAdaptableInverse</item>
         <item name="colorControlNormal">@color/black</item>
-        <item name="buttonTint">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
+<!--        <item name="buttonTint">@color/black</item>-->
+<!--        <item name="colorPrimaryDark">@color/black</item>-->
 <!--        <item name="colorSurface">@color/black</item>-->
     </style>
     <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
@@ -206,6 +206,11 @@
         <item name="buttonTint">@color/black</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorSurface">@color/white</item>
+    </style>
+
+
+    <style name="preferenceCategory" parent="android:Theme">
+        <item name="android:background">@color/colorPrimaryAdaptable</item>
     </style>
 
     <style name="ContactDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog.Alert">

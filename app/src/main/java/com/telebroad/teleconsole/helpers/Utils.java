@@ -1,17 +1,16 @@
 package com.telebroad.teleconsole.helpers;
 
 
+import static android.app.NotificationManager.INTERRUPTION_FILTER_PRIORITY;
+import static android.text.format.DateUtils.DAY_IN_MILLIS;
+import static com.telebroad.teleconsole.helpers.Utils.ConnectionStatus.DISCONNECTED;
+import static com.telebroad.teleconsole.helpers.Utils.ConnectionStatus.MOBILE;
+import static com.telebroad.teleconsole.helpers.Utils.ConnectionStatus.UNKNOWN;
+import static com.telebroad.teleconsole.helpers.Utils.ConnectionStatus.WIFI;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.NotificationManager;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.content.ContextCompat;
-import androidx.exifinterface.media.ExifInterface;
-import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.MutableLiveData;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -45,7 +44,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.content.ContextCompat;
+import androidx.exifinterface.media.ExifInterface;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -54,18 +62,17 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.telebroad.teleconsole.R;
 import com.telebroad.teleconsole.controller.AppController;
 import com.telebroad.teleconsole.controller.ContactRecyclerAdapter;
-import com.telebroad.teleconsole.controller.SmsConversationActivity;
 import com.telebroad.teleconsole.controller.ViewContactActivity;
 import com.telebroad.teleconsole.controller.dashboard.ContactSaveLocationDialog;
 import com.telebroad.teleconsole.controller.login.SignInActivity;
 import com.telebroad.teleconsole.model.Contact;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.lang.reflect.Field;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
@@ -80,9 +87,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import crl.android.pdfwriter.StandardCharsets;
-import static android.app.NotificationManager.INTERRUPTION_FILTER_PRIORITY;
-import static android.text.format.DateUtils.DAY_IN_MILLIS;
-import static com.telebroad.teleconsole.helpers.Utils.ConnectionStatus.*;
 
 
 public class Utils {
@@ -106,6 +110,18 @@ public class Utils {
         }
         return "";
     }
+
+    private static final String[] VIDEO_EXTENSIONS = {
+            "video/mp4", "mp4", "video/3gp", "3gp", "video/mkv", "mkv", "video/avi", "avi", "video/3gpp", "3gpp",
+            "video/mov", "mov", "video/flv", "flv", "video/wmv", "wmv", "video/webm", "webm", "Video"
+            // Add more video extensions if needed
+    };
+
+    private static final String[] IMAGE_EXTENSIONS = {
+            "image/jpeg", "jpeg", "image/png","png", "image/jpg","jpg", "image/gif","gif", "image/webp","webp", "image/tiff","tiff", "image/raw", "raw", "image/bmp",
+            "bmp", "image/heif", "heif", "image/jpeg2000", "jpeg2000", "image/jfif", "jfif", "image/.jfif", "Image"
+            // Add more video extensions if needed
+    };
 
     // We push off the permission request to the activity
     @RequiresPermission(Manifest.permission.CALL_PHONE)
@@ -674,18 +690,17 @@ public static Bitmap drawableToBitmap (Drawable drawable) {
         return Executors.newSingleThreadExecutor();
     }
     public static boolean isImageType(String mimeType) {
-        return mimeType.equals("image/jpeg") ||
-                mimeType.equals("image/png") ||
-                mimeType.equals("image/jpg") ||
-                mimeType.equals("image/gif") ||
-                mimeType.equals("image/webp") ||
-                mimeType.equals("image/tiff") ||
-                mimeType.equals("image/raw") ||
-                mimeType.equals("image/bmp") ||
-                mimeType.equals("image/heif") ||
-                mimeType.equals("image/jpeg2000") ||
-                mimeType.equals("image/jfif") ||
-                mimeType.equals("image/.jfif") ||
-                mimeType.equals("Image");
+        for (String imageExtension : IMAGE_EXTENSIONS) {
+            if (imageExtension.equals(mimeType)) return true; // It's a video file
+        }
+        return false;
+
+    }
+
+    public static boolean isVidoeType(String mimeType) {
+        for (String videoExtension : VIDEO_EXTENSIONS) {
+            if (videoExtension.equals(mimeType)) return true; // It's a video file
+        }
+        return false;
     }
 }

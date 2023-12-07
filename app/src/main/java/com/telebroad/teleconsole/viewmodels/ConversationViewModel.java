@@ -1,25 +1,14 @@
 package com.telebroad.teleconsole.viewmodels;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static com.google.common.base.Strings.nullToEmpty;
+
 import android.graphics.Bitmap;
 import android.util.Log;
-import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
-import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
-import com.bumptech.glide.request.RequestOptions;
-//import com.telebroad.teleconsole.R;
-import com.telebroad.teleconsole.controller.AppController;
-import com.telebroad.teleconsole.helpers.Utils;
-import com.telebroad.teleconsole.model.Message;
-import com.telebroad.teleconsole.model.repositories.ContactRepository;
-import com.telebroad.teleconsole.model.repositories.SMSRepository;
-
-import java.security.MessageDigest;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,42 +17,55 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-import static com.bumptech.glide.request.target.Target.SIZE_ORIGINAL;
-import static com.google.common.base.Strings.isNullOrEmpty;
-import static com.google.common.base.Strings.nullToEmpty;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
+import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
+import com.bumptech.glide.request.RequestOptions;
+import com.telebroad.teleconsole.controller.AppController;
+import com.telebroad.teleconsole.helpers.Utils;
+import com.telebroad.teleconsole.model.Message;
+import com.telebroad.teleconsole.model.repositories.ContactRepository;
+import com.telebroad.teleconsole.model.repositories.SMSRepository;
+
+import java.security.MessageDigest;
+import java.util.Arrays;
+import java.util.List;
 
 public class ConversationViewModel extends SMSViewModel {
     private ContactRepository repository = ContactRepository.getInstance();
     private LiveData<String> name;
     private MediatorLiveData<String> nameTime;
+    private static final String TAG = "yehudaCVM";
+    public static final String[] vidFormats = {"video/mp4"};
 
-    @BindingAdapter({"mms_image"})
-    public static void loadImage(ImageView view, String imageUrl) {
-        if (isNullOrEmpty(imageUrl)) {
-            return;
-        }
-        String mimeType =  MimeTypeMap.getFileExtensionFromUrl(imageUrl);
-        if (mimeType.equals("jpg") || mimeType.equals("png")||mimeType.equals("gif") || mimeType.equals("webp")
-                || mimeType.equals("tiff") || mimeType.equals("raw") || mimeType.equals("heif") || mimeType.equals("jpeg2000")|| mimeType.equals("jpeg")) {
-            Glide.with(view.getContext()).applyDefaultRequestOptions(new RequestOptions().transform(new BitmapTransformation() {
-                @Override
-                protected Bitmap transform(@NonNull BitmapPool pool, @NonNull Bitmap toTransform, int outWidth, int outHeight) {
-                   // android.util.Log.d("Glide01", "density " + toTransform.getDensity());
-                    toTransform.setDensity(160);
-                    return toTransform;
-                }
-
-                @Override
-                public void updateDiskCacheKey(@NonNull MessageDigest messageDigest) {
-
-                }
-            })).load(imageUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
-        }
-    }
+//    @BindingAdapter({"mms_image"})
+//    public static void loadImage(ImageView view, String imageUrl) {
+//        Log.d(TAG, "loadImage: was called");
+//        if (isNullOrEmpty(imageUrl)) {
+//            return;
+//        }
+//        String mimeType =  MimeTypeMap.getFileExtensionFromUrl(imageUrl);
+//        if (mimeType.equals("jpg") || mimeType.equals("png")||mimeType.equals("gif") || mimeType.equals("webp")
+//                || mimeType.equals("tiff") || mimeType.equals("raw") || mimeType.equals("heif") || mimeType.equals("jpeg2000")|| mimeType.equals("jpeg")) {
+//            Glide.with(view.getContext()).applyDefaultRequestOptions(new RequestOptions().transform(new BitmapTransformation() {
+//                @Override
+//                protected Bitmap transform(@NonNull BitmapPool pool, @NonNull Bitmap toTransform, int outWidth, int outHeight) {
+//                   // android.util.Log.d("Glide01", "density " + toTransform.getDensity());
+//                    toTransform.setDensity(160);
+//                    return toTransform;
+//                }
+//
+//                @Override
+//                public void updateDiskCacheKey(@NonNull MessageDigest messageDigest) {
+//
+//                }
+//            })).load(imageUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
+//        }
+//    }
     @BindingAdapter({"mms_image_recycler"})
     public static void loadImageForRecyclerView(ImageView view, String imageUrl) {
+        Log.d(TAG, "loadImageForRecyclerView: was called");
         if (isNullOrEmpty(imageUrl)) {
             return;
         }
@@ -166,13 +168,22 @@ public class ConversationViewModel extends SMSViewModel {
     }
 
     public int imagviewVisibility() {
-        return getItem().getMedia() == null || getItem().getMedia().isEmpty() || areAllNotImages(getItem().getMedia()) ? GONE : VISIBLE;
+        Object a =  ( areAllNotVideos(getItem().getMedia()));
+        return getItem().getMedia() == null || getItem().getMedia().isEmpty() || (areAllNotImages(getItem().getMedia()) && areAllNotVideos(getItem().getMedia()))  ? GONE : VISIBLE;
     }
+
+    public int VideoButtonVisibility() {
+        return getItem().getMedia() == null || getItem().getMedia().isEmpty() || areAllNotVideos(getItem().getMedia()) ? GONE : VISIBLE;
+    }
+
+
     public boolean isNotImage() {
+        Log.d("yehuda", "isNotImage: was called");
         String gg = getMMSImage();
         if (!isNullOrEmpty(gg)){
             String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(getMMSImage()));
             if (!isNullOrEmpty(type)) {
+                Log.d("yehuda", "isNotImage: type is " + type);
                 if (type.equals("image/jpeg") || type.equals("image/png") || type.equals("image/jpg") || type.equals("image/gif") || type.equals("image/webp") || type.equals("image/tiff") || type.equals("image/raw") || type.equals("image/bmp") || type.equals("image/heif") || type.equals("image/jpeg2000") || type.equals("image/jfif") || type.equals("image/.jfif") || type.equals("Image")) {
                      return false;
                 }else {
@@ -184,6 +195,16 @@ public class ConversationViewModel extends SMSViewModel {
         //return isNullOrEmpty(getMMSImage());
     }
 
+    public boolean isNotVideo() {
+        String gg = getMMSImage();
+        if (isNullOrEmpty(gg)) return false;
+        String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(getMMSImage()));
+        if (isNullOrEmpty(type)) return false;
+        Log.d("yehuda", "isNotImage: type is " + type);
+        return Arrays.stream(vidFormats).noneMatch(str-> str.equals(type));
+
+    }
+
     public boolean areAllNotImages(List<String> urls) {
         if (urls == null || urls.isEmpty()) {
             return true;
@@ -192,6 +213,21 @@ public class ConversationViewModel extends SMSViewModel {
             if (!isNullOrEmpty(url)) {
                 String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(url));
                 if (!isNullOrEmpty(type) && Utils.isImageType(type)) {
+                    return false;  // Found an image URL in the list
+                }
+            }
+        }
+        return true;  // No image URLs found in the list
+    }
+
+    public boolean areAllNotVideos(List<String> urls) {
+        if (urls == null || urls.isEmpty()) {
+            return true;
+        }
+        for (String url : urls) {
+            if (!isNullOrEmpty(url)) {
+                String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(url));
+                if (!isNullOrEmpty(type) && Utils.isVidoeType(type)) {
                     return false;  // Found an image URL in the list
                 }
             }

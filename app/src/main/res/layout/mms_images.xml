@@ -9,8 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/smsImg"
+        <FrameLayout
+            android:id="@+id/videoFrameView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -21,16 +21,50 @@
             app:layout_constraintWidth_min="215dp"
             android:background="@drawable/rounded_rectangle"
             app:layout_constrainedWidth="true"
-            android:transitionName="@{childItem.url()}"
-            app:customAttribute="@{childItem.url()}"
-            app:srcCompat="@drawable/login_background"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            >
+            <ImageView
+                android:id="@+id/smsImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clipToOutline="true"
+                android:cropToPadding="true"
+                android:scaleType="fitXY"
+                app:layout_constraintHeight_min="50dp"
+                app:layout_constraintWidth_min="50dp"
+                android:background="@drawable/rounded_rectangle"
+                android:backgroundTint="@color/colorPrimary"
+                app:layout_constrainedWidth="true"
+                android:transitionName="@{childItem.url()}"
+                app:customAttribute="@{childItem.url()}"
+                app:srcCompat="@drawable/login_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <Button
+                android:visibility="@{childItem.isVideo()}"
+                android:id="@+id/playButtonvideoView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_play_circle_outline_blue"
+                />
+        </FrameLayout>
+
+
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

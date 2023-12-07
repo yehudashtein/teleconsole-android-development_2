@@ -13,6 +13,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     maven { url "https://storage.googleapis.com/logrocket-maven/" }
     maven { url 'https://maven.fabric.io/public' }
     flatDir { dirs 'libs' }
@@ -37,7 +40,7 @@ android {
         }
     }
 
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.telebroad.teleconsole"
@@ -90,7 +93,11 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation platform('com.google.firebase:firebase-bom:29.3.0')
     //implementation 'com.github.tanersener:mobile-ffmpeg-full:4.4'
+    implementation 'com.devbrackets.android:exomedia:4.0.0' // Replace x.x.x with the actual version
 
+    implementation "androidx.media3:media3-exoplayer:1.2.0"
+    implementation "androidx.media3:media3-exoplayer-dash:1.2.0"
+    implementation "androidx.media3:media3-ui:1.2.0"
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.6.0'

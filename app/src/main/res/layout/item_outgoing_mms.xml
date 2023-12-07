@@ -24,7 +24,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:visibility="@{viewmodel.audioVisibility()}"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dlrErrorBtn"
             app:layout_constraintStart_toEndOf="@id/guideline12"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/voice_note_border"
@@ -118,13 +118,12 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:visibility="@{viewmodel.msgDataVisibility()}"
-            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@+id/timeText"
-            app:layout_constraintEnd_toStartOf="@+id/imageView11"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/dlrErrorBtn"
+            app:layout_constraintEnd_toStartOf="@id/dlrErrorBtn"
+
+
             app:layout_constraintTop_toBottomOf="@+id/pictureView"
-            app:layout_constraintVertical_chainStyle="packed"
+
             tools:text="Hello" />
 
         <TextView
@@ -170,10 +169,11 @@
             android:visibility="@{viewmodel.imagviewVisibility()}"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@+id/msg_data"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dlrErrorBtn"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@id/VoiceNoteLayout" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -186,13 +186,12 @@
             android:id="@+id/dlrErrorBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="0dp"
             android:visibility="@{viewmodel.dlrErrorVisibility()}"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintEnd_toStartOf="@id/msg_data"
-            app:layout_constraintStart_toStartOf="@+id/guideline12"
-            app:layout_constraintTop_toTopOf="@+id/msg_data"
+            app:layout_constraintTop_toTopOf="@id/layout"
+            app:layout_constraintBottom_toBottomOf="@id/layout"
+            app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_error_outline_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

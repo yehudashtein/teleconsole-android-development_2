@@ -1,5 +1,14 @@
 package com.telebroad.teleconsole.controller;
 
+import static android.Manifest.permission.RECORD_AUDIO;
+import static android.Manifest.permission.USE_SIP;
+import static android.text.format.DateUtils.SECOND_IN_MILLIS;
+import static com.androidnetworking.utils.Utils.getMimeType;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static com.telebroad.teleconsole.model.Message.Direction.IN;
+import static com.telebroad.teleconsole.model.Message.Direction.OUT;
+import static com.telebroad.teleconsole.model.SMS.MMSMedia.compressImage;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
@@ -19,7 +28,6 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaMetadata;
@@ -57,6 +65,25 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.appcompat.view.ActionMode;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.FileProvider;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
 import com.bumptech.glide.Glide;
 import com.fxn.pix.Pix;
@@ -76,8 +103,6 @@ import com.telebroad.teleconsole.helpers.SettingsHelper;
 import com.telebroad.teleconsole.helpers.TeleConsoleError;
 import com.telebroad.teleconsole.helpers.URLHelper;
 import com.telebroad.teleconsole.helpers.Utils;
-import com.telebroad.teleconsole.notification.VoicemailPlayingService;
-import com.telebroad.teleconsole.pjsip.SipManager;
 import com.telebroad.teleconsole.model.Contact;
 import com.telebroad.teleconsole.model.DlrUpdate;
 import com.telebroad.teleconsole.model.Line;
@@ -88,11 +113,14 @@ import com.telebroad.teleconsole.model.Settings;
 import com.telebroad.teleconsole.model.TeleConsoleProfile;
 import com.telebroad.teleconsole.model.repositories.SMSRepository;
 import com.telebroad.teleconsole.notification.NotificationBuilder;
+import com.telebroad.teleconsole.notification.VoicemailPlayingService;
+import com.telebroad.teleconsole.pjsip.SipManager;
 import com.telebroad.teleconsole.viewmodels.ConversationListViewModel;
 import com.telebroad.teleconsole.viewmodels.ConversationListViewModelFactory;
 import com.telebroad.teleconsole.viewmodels.ConversationViewModel;
 import com.telebroad.teleconsole.viewmodels.MMSLinksViewModels;
 import com.telebroad.teleconsole.viewmodels.VoicemailViewModel;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -115,33 +143,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.appcompat.view.ActionMode;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import team.clevel.documentscanner.helpers.ScannerConstants;
-import static android.Manifest.permission.RECORD_AUDIO;
-import static android.Manifest.permission.USE_SIP;
-import static android.text.format.DateUtils.SECOND_IN_MILLIS;
-import static com.androidnetworking.utils.Utils.getMimeType;
-import static com.google.common.base.Strings.isNullOrEmpty;
-import static com.telebroad.teleconsole.model.Message.Direction.IN;
-import static com.telebroad.teleconsole.model.Message.Direction.OUT;
-import static com.telebroad.teleconsole.model.SMS.MMSMedia.compressImage;
+
 
 public class SmsConversationActivity extends AppCompatActivity {
     private boolean isPlaying, audioHasStarted = false, audioHasFinished = false;
@@ -1202,19 +1205,30 @@ public class SmsConversationActivity extends AppCompatActivity {
             return isFiltering ? filteredMessageModels.get(position) : messageModels.get(position);
         }
 
+        private static final String TAG = "yehuda";
+
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             if (messages != null) {
                 ConversationViewModel viewModel = getCurrent(position);
+
                 holder.setMessageViewModel(viewModel);
-                if (viewModel.getItem().getMedia() != null && viewModel.getItem().getMedia().size() >0 && selectedMessageModels.stream().noneMatch(ConversationViewModel::isNotImage)){
+                ArrayList<String> media = viewModel.getItem().getMedia();
+                if (media != null && media.size() >0 && (!viewModel.areAllNotImages(media)||!viewModel.areAllNotVideos(media))){
                     List<MMSLinksViewModels> mmsLinksViewModels = viewModel.getItem().getMedia().stream().map(MMSLinksViewModels::createInstance).collect(Collectors.toCollection(ArrayList::new));
                     ChildAdapter childAdapter = new ChildAdapter(mmsLinksViewModels,this,position);
+                    Log.d(TAG, "1");
                     RecyclerView recyclerView = holder.itemView.findViewById(R.id.pictureView);
+                    Log.d(TAG, "2");
                     recyclerView.setLayoutManager(new LinearLayoutManager(SmsConversationActivity.this));
+                    Log.d(TAG, "3");
                     recyclerView.setAdapter(childAdapter);
+                    Log.d(TAG, "4");
+
                 }
+
             }
+
         }
 
         @Override
@@ -1294,6 +1308,8 @@ public class SmsConversationActivity extends AppCompatActivity {
             private final ViewDataBinding binding;
             private ConversationViewModel item;
             private final RecyclerView pictureView =this.itemView.findViewById(R.id.pictureView);
+            private final ImageView videoView =this.itemView.findViewById(R.id.videoView);
+
             private final ConstraintLayout VoiceNoteLayout = this.itemView.findViewById(R.id.VoiceNoteLayout);
             private final ImageView playChat1 = this.itemView.findViewById(R.id.playChat1);
             private final SeekBar seekBar1 = this.itemView.findViewById(R.id.sb);
@@ -1304,14 +1320,23 @@ public class SmsConversationActivity extends AppCompatActivity {
                 ImageView dlrError = this.itemView.findViewById(R.id.dlrErrorBtn);
                 if(dlrError != null){
                     dlrError.setOnClickListener(view -> {
-                        AlertDialog alert = new AlertDialog.Builder(SmsConversationActivity.this).setTitle("SMS Send Error").setPositiveButton("OK", (dialog, which) -> dialog.dismiss()).setMessage(item.getDlrError()).create();
+                        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(SmsConversationActivity.this)
+                                .setTitle("SMS Send Error")
+                                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                                .setMessage(item.getDlrError());
+
+                        AlertDialog alert = builder.create();
+
                         alert.setOnShowListener(dialog -> {
                             Button positiveButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
                             Button negativeButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
-                            positiveButton.setTextColor(getResources().getColor(R.color.black,null));
-                            negativeButton.setTextColor(getResources().getColor(R.color.black,null));
-                        });alert.show();
+                            positiveButton.setTextColor(getResources().getColor(R.color.black, null));
+                            negativeButton.setTextColor(getResources().getColor(R.color.black, null));
+                        });
+
+                        alert.show();
                     });
+
                 }
                 ImageView play = this.itemView.findViewById(R.id.playChat1);
                 play.setBackground(Utils.getRipple(SmsConversationActivity.this));
@@ -1644,14 +1669,18 @@ public class SmsConversationActivity extends AppCompatActivity {
        private SmsConversationActivity.OnChildItemClickListener listener;
        private int position1;
         public ChildAdapter(List<MMSLinksViewModels> models,SmsConversationActivity.OnChildItemClickListener listener,int position ) {
+            Log.d("yehuda", "ChildAdapter: called" + position);
             this.models = models;
             this.listener = listener;
             this.position1 = position;
             notifyDataSetChanged();
         }
 
+        private static final String TAG = "yehuda";
         @Override
+       
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            Log.d("yehuda", "onCreateViewHolder: called");
             MmsImagesBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                     R.layout.mms_images, parent, false);
             return new ViewHolder(binding);
@@ -1662,18 +1691,39 @@ public class SmsConversationActivity extends AppCompatActivity {
             holder.binding.setChildItem(models.get(position));
             holder.binding.setLifecycleOwner(SmsConversationActivity.this);
             holder. binding.executePendingBindings();
-            holder.binding.smsImg.setOnClickListener(v -> {
-                Intent intent = new Intent(SmsConversationActivity.this, MMSImageViewActivity.class);
-                intent.putExtra(MMSImageViewActivity.MMS_IMAGE_URL, holder.binding.smsImg.getTransitionName());
-                startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(SmsConversationActivity.this, holder.binding.smsImg,"beautifulAnimate").toBundle());
-            });
-            holder.binding.smsImg.setOnLongClickListener(v -> {
-                int currentPosition = holder.getAbsoluteAdapterPosition();
-                if (listener != null && currentPosition != RecyclerView.NO_POSITION) {
-                    listener.onChildItemClicked(position1,position);
-                }
-                return true;
-            });
+
+            // TODO: 12/6/2023  from here
+            String str = models.get(position).url();
+            if ( str.length()>0 && Utils.isVidoeType(MimeTypeMap.getFileExtensionFromUrl(models.get(position).url()))) {
+                holder.binding.playButtonvideoView.setOnClickListener(v -> {
+                    Intent intent = new Intent(SmsConversationActivity.this, MMSVideoViewActivity.class);
+                    intent.putExtra(MMSVideoViewActivity.MMS_VIDEO_URL, str);
+                    startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(SmsConversationActivity.this, holder.binding.smsImg, "beautifulAnimate").toBundle());
+                });
+                holder.binding.playButtonvideoView.setOnLongClickListener(v -> {
+                    int currentPosition = holder.getAbsoluteAdapterPosition();
+                    if (listener != null && currentPosition != RecyclerView.NO_POSITION) {
+                        listener.onChildItemClicked(position1, position);
+                    }
+                    return true;
+                });
+            }
+            else {
+                // TODO: 12/6/2023 up to here
+
+                holder.binding.smsImg.setOnClickListener(v -> {
+                    Intent intent = new Intent(SmsConversationActivity.this, MMSImageViewActivity.class);
+                    intent.putExtra(MMSImageViewActivity.MMS_IMAGE_URL, holder.binding.smsImg.getTransitionName());
+                    startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(SmsConversationActivity.this, holder.binding.smsImg, "beautifulAnimate").toBundle());
+                });
+                holder.binding.smsImg.setOnLongClickListener(v -> {
+                    int currentPosition = holder.getAbsoluteAdapterPosition();
+                    if (listener != null && currentPosition != RecyclerView.NO_POSITION) {
+                        listener.onChildItemClicked(position1, position);
+                    }
+                    return true;
+                });
+            }
         }
 
         @Override

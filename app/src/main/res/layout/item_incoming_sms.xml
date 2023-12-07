@@ -99,6 +99,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/VoiceNoteLayout" />
 
+        <ImageView
+            android:id="@+id/videoView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            android:visibility="@{viewmodel.imagviewVisibility()}"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/msg_data"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/VoiceNoteLayout" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:id="@+id/VoiceNoteLayout"

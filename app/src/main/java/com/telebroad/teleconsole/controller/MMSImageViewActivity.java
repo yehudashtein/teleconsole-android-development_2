@@ -1,5 +1,7 @@
 package com.telebroad.teleconsole.controller;
 
+import static com.google.common.base.Strings.isNullOrEmpty;
+
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -14,7 +16,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,15 +24,18 @@ import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.google.android.material.snackbar.Snackbar;
 import com.telebroad.teleconsole.R;
-import com.telebroad.teleconsole.helpers.AlertsHelper;
 import com.telebroad.teleconsole.helpers.Utils;
 
 import java.io.File;
@@ -43,16 +47,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
-
-import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-
-import static com.google.common.base.Strings.isNullOrEmpty;
 
 public class MMSImageViewActivity extends AppCompatActivity {
     public static final String MMS_IMAGE_URL = "com.telebroad.teleconsole.controller.mms.image.view.activity.mms.image.urlString";
@@ -222,7 +216,7 @@ public class MMSImageViewActivity extends AppCompatActivity {
                         runOnUiThread(onStart);
                     }
                     InputStream is = url.openStream();
-                    OutputStream os = new FileOutputStream( file);
+                    OutputStream os = new FileOutputStream(file);
                     byte[] b = new byte[2048];
                     int length;
                     while((length = is.read(b)) != -1){
