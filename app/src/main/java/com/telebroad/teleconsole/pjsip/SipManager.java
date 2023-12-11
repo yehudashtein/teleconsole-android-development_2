@@ -1,9 +1,16 @@
 package com.telebroad.teleconsole.pjsip;
 
-import android.app.Activity;
+import static android.Manifest.permission.RECORD_AUDIO;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static com.telebroad.teleconsole.helpers.SettingsHelper.SIP_USERNAME;
+import static com.telebroad.teleconsole.helpers.SettingsHelper.getString;
+import static com.telebroad.teleconsole.helpers.URLHelper.KEY_CALLERIDD;
+import static com.telebroad.teleconsole.helpers.URLHelper.KEY_DNUMBER;
+import static com.telebroad.teleconsole.helpers.URLHelper.KEY_SENDER;
+import static com.telebroad.teleconsole.helpers.URLHelper.KEY_SNUMBER;
+import static com.telebroad.teleconsole.helpers.URLHelper.POST_SEND_CALL;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.lifecycle.LiveData;
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,8 +21,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
 import com.android.volley.Request;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.telebroad.teleconsole.R;
@@ -26,17 +37,9 @@ import com.telebroad.teleconsole.helpers.URLHelper;
 import com.telebroad.teleconsole.helpers.Utils;
 import com.telebroad.teleconsole.model.FullPhone;
 import com.telebroad.teleconsole.model.PhoneNumber;
+
 import java.util.HashMap;
 import java.util.Map;
-import static android.Manifest.permission.RECORD_AUDIO;
-import static com.google.common.base.Strings.isNullOrEmpty;
-import static com.telebroad.teleconsole.helpers.SettingsHelper.SIP_USERNAME;
-import static com.telebroad.teleconsole.helpers.SettingsHelper.getString;
-import static com.telebroad.teleconsole.helpers.URLHelper.KEY_CALLERIDD;
-import static com.telebroad.teleconsole.helpers.URLHelper.KEY_DNUMBER;
-import static com.telebroad.teleconsole.helpers.URLHelper.KEY_SENDER;
-import static com.telebroad.teleconsole.helpers.URLHelper.KEY_SNUMBER;
-import static com.telebroad.teleconsole.helpers.URLHelper.POST_SEND_CALL;
 
 /**
  * Created by yser on 3/13/2018.
@@ -127,19 +130,24 @@ public interface SipManager<Call> {
         if (activity == null) {
             return;
         }
-        AlertDialog alert =  new AlertDialog.Builder(activity, R.style.DialogStyle).
-                setTitle(R.string.no_mic_perm_title).
-                setMessage(R.string.no_mic_perm_message).
-                setPositiveButton("Give Permission", (dialog, which) -> {
+        MaterialAlertDialogBuilder alertBuilder = new MaterialAlertDialogBuilder(activity, R.style.DialogStyle)
+                .setTitle(R.string.no_mic_perm_title)
+                .setMessage(R.string.no_mic_perm_message)
+                .setPositiveButton("Give Permission", (dialog, which) -> {
                     Intent intent = new Intent();
                     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     intent.setData(Uri.parse("package:com.telebroad.teleconsole"));
                     activity.startActivity(intent);
                     dialog.dismiss();
-//                }).setNeutralButton("Call Anyway", (dialog, which) -> {
-//                    sipCall(dest, activity);
-//                    dialog.dismiss();
-                }).create();
+                });
+        // Uncomment the following lines if you want to include the "Call Anyway" button
+        // .setNeutralButton("Call Anyway", (dialog, which) -> {
+        //     sipCall(dest, activity);
+        //     dialog.dismiss();
+        // });
+
+        AlertDialog alert = alertBuilder.create();
+
         alert.setOnShowListener(dialog -> {
             Button positiveButton = ((androidx.appcompat.app.AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
             Button negativeButton = ((androidx.appcompat.app.AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);

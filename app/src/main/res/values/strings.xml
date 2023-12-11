@@ -339,6 +339,7 @@
     <string name="attachment">%1$s Attachment</string>
     <string name="copy">Copy</string>
     <string name="image_downloaded">Image Downloaded</string>
+    <string name="video_downloaded">Video Downloaded</string>
     <string name="share">Share</string>
     <string name="short_number_error_title">Invalid Phone Number</string>
     <string name="short_number_error_message">Sorry, This does not look like a real phone number</string>

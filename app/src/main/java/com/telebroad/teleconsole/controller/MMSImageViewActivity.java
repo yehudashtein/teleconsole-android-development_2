@@ -156,7 +156,7 @@ public class MMSImageViewActivity extends AppCompatActivity {
                 contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME,System.currentTimeMillis()+".jpg");
                 contentValues.put(MediaStore.MediaColumns.DATA,urlString);
                 contentValues.put(MediaStore.MediaColumns.MIME_TYPE,"image/*");
-                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES+ File.separator+"TestFolder");
+                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + File.separator + "Telebroad Images");
                 Uri uri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
                 fos = contentResolver.openOutputStream(Objects.requireNonNull(uri));
                 bitmap.compress(Bitmap.CompressFormat.JPEG,100,fos);
