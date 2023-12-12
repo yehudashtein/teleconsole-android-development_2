@@ -182,6 +182,17 @@
 <!--        <item name="colorSurface">@color/black</item>-->
 <!--    </style>-->
 
+    <style name="MyDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <!-- Remove action bar, if present -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+        <!-- Adjust padding and margins -->
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+
+        <!-- Remove or adjust other UI elements as necessary -->
+    </style>
     <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
         <item name="android:buttonBarPositiveButtonStyle">@style/NegativeButtonStyle</item>

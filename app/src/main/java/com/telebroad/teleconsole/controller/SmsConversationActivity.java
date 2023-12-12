@@ -336,7 +336,7 @@ public class SmsConversationActivity extends AppCompatActivity {
         // If there is only 1 line available, it makes no sense to allow the user to switch lines
         if (availableLines.length > 1) {
             callerID.setOnClickListener(view -> {
-                AlertDialog alert= new MaterialAlertDialogBuilder(this).setTitle("Pick a SMS line to send from").
+                AlertDialog alert= new MaterialAlertDialogBuilder(this, R.style.MyDialogStyle).setTitle("Pick a SMS line to send from").
                         setItems(availableLines, ((dialog, which) -> {
                             String newSender = availableLines[which];
                             if (!PhoneNumber.stringEqualsString(newSender, myNumber)) {
@@ -346,8 +346,7 @@ public class SmsConversationActivity extends AppCompatActivity {
                 alert.setOnShowListener(dialog -> {
                     Button positiveButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
                     Button negativeButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
-                    positiveButton.setTextColor(getResources().getColor(R.color.black,null));
-                    negativeButton.setTextColor(getResources().getColor(R.color.black,null));
+
                 });alert.show();
             });
         }

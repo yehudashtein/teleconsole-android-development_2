@@ -20,6 +20,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.OptIn;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
@@ -58,6 +59,19 @@ public class MMSVideoViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mms_video_view1);
         playerView = findViewById(R.id.exo_player_view);
         urlString = getIntent().getStringExtra(MMS_VIDEO_URL);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("");
+        }
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                finishAfterTransition();
+            }
+        };
+        getOnBackPressedDispatcher().addCallback(this, callback);
+
         Uri videoUri = Uri.parse(urlString);
         if(!isNullOrEmpty(urlString)){
             try {

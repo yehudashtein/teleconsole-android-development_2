@@ -46,8 +46,8 @@ android {
         applicationId "com.telebroad.teleconsole"
         minSdkVersion 26
         targetSdkVersion 33
-        versionCode 214
-        versionName '2.13.16'
+        versionCode 216
+        versionName '2.13.18'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         ndk {
@@ -100,7 +100,7 @@ dependencies {
     implementation "androidx.media3:media3-ui:1.2.0"
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'org.sufficientlysecure:html-textview:4.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
